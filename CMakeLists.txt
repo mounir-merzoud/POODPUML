@@ -6,9 +6,18 @@ set(SFML_DIR "C:/Users/Jean/SFML/SFML-2.6.1-windows-gcc-13.1.0-mingw-64-bit/SFML
 
 find_package(SFML 2.6.1 COMPONENTS graphics audio REQUIRED)
 
-include_directories(${SFML_INCLUDE_DIR})
+include_directories(${SFML_INCLUDE_DIR} src include)
 
-add_executable(towerDefense main.cpp)
+add_executable(towerDefense
+    main.cpp
+    src/GameObject.cpp
+    src/Monster.cpp
+    src/Tower.cpp
+    src/Animation.cpp
+    src/GameObjectFactory.cpp
+)
+
+target_include_directories(towerDefense PRIVATE ${SFML_INCLUDE_DIR} src)
 
 target_link_libraries(towerDefense sfml-graphics sfml-audio)
 

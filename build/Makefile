@@ -546,6 +546,126 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\towerDefense.dir\build.make CMakeFiles/towerDefense.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+src/Animation.obj: src/Animation.cpp.obj
+.PHONY : src/Animation.obj
+
+# target to build an object file
+src/Animation.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\towerDefense.dir\build.make CMakeFiles/towerDefense.dir/src/Animation.cpp.obj
+.PHONY : src/Animation.cpp.obj
+
+src/Animation.i: src/Animation.cpp.i
+.PHONY : src/Animation.i
+
+# target to preprocess a source file
+src/Animation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\towerDefense.dir\build.make CMakeFiles/towerDefense.dir/src/Animation.cpp.i
+.PHONY : src/Animation.cpp.i
+
+src/Animation.s: src/Animation.cpp.s
+.PHONY : src/Animation.s
+
+# target to generate assembly for a file
+src/Animation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\towerDefense.dir\build.make CMakeFiles/towerDefense.dir/src/Animation.cpp.s
+.PHONY : src/Animation.cpp.s
+
+src/GameObject.obj: src/GameObject.cpp.obj
+.PHONY : src/GameObject.obj
+
+# target to build an object file
+src/GameObject.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\towerDefense.dir\build.make CMakeFiles/towerDefense.dir/src/GameObject.cpp.obj
+.PHONY : src/GameObject.cpp.obj
+
+src/GameObject.i: src/GameObject.cpp.i
+.PHONY : src/GameObject.i
+
+# target to preprocess a source file
+src/GameObject.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\towerDefense.dir\build.make CMakeFiles/towerDefense.dir/src/GameObject.cpp.i
+.PHONY : src/GameObject.cpp.i
+
+src/GameObject.s: src/GameObject.cpp.s
+.PHONY : src/GameObject.s
+
+# target to generate assembly for a file
+src/GameObject.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\towerDefense.dir\build.make CMakeFiles/towerDefense.dir/src/GameObject.cpp.s
+.PHONY : src/GameObject.cpp.s
+
+src/GameObjectFactory.obj: src/GameObjectFactory.cpp.obj
+.PHONY : src/GameObjectFactory.obj
+
+# target to build an object file
+src/GameObjectFactory.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\towerDefense.dir\build.make CMakeFiles/towerDefense.dir/src/GameObjectFactory.cpp.obj
+.PHONY : src/GameObjectFactory.cpp.obj
+
+src/GameObjectFactory.i: src/GameObjectFactory.cpp.i
+.PHONY : src/GameObjectFactory.i
+
+# target to preprocess a source file
+src/GameObjectFactory.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\towerDefense.dir\build.make CMakeFiles/towerDefense.dir/src/GameObjectFactory.cpp.i
+.PHONY : src/GameObjectFactory.cpp.i
+
+src/GameObjectFactory.s: src/GameObjectFactory.cpp.s
+.PHONY : src/GameObjectFactory.s
+
+# target to generate assembly for a file
+src/GameObjectFactory.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\towerDefense.dir\build.make CMakeFiles/towerDefense.dir/src/GameObjectFactory.cpp.s
+.PHONY : src/GameObjectFactory.cpp.s
+
+src/Monster.obj: src/Monster.cpp.obj
+.PHONY : src/Monster.obj
+
+# target to build an object file
+src/Monster.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\towerDefense.dir\build.make CMakeFiles/towerDefense.dir/src/Monster.cpp.obj
+.PHONY : src/Monster.cpp.obj
+
+src/Monster.i: src/Monster.cpp.i
+.PHONY : src/Monster.i
+
+# target to preprocess a source file
+src/Monster.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\towerDefense.dir\build.make CMakeFiles/towerDefense.dir/src/Monster.cpp.i
+.PHONY : src/Monster.cpp.i
+
+src/Monster.s: src/Monster.cpp.s
+.PHONY : src/Monster.s
+
+# target to generate assembly for a file
+src/Monster.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\towerDefense.dir\build.make CMakeFiles/towerDefense.dir/src/Monster.cpp.s
+.PHONY : src/Monster.cpp.s
+
+src/Tower.obj: src/Tower.cpp.obj
+.PHONY : src/Tower.obj
+
+# target to build an object file
+src/Tower.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\towerDefense.dir\build.make CMakeFiles/towerDefense.dir/src/Tower.cpp.obj
+.PHONY : src/Tower.cpp.obj
+
+src/Tower.i: src/Tower.cpp.i
+.PHONY : src/Tower.i
+
+# target to preprocess a source file
+src/Tower.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\towerDefense.dir\build.make CMakeFiles/towerDefense.dir/src/Tower.cpp.i
+.PHONY : src/Tower.cpp.i
+
+src/Tower.s: src/Tower.cpp.s
+.PHONY : src/Tower.s
+
+# target to generate assembly for a file
+src/Tower.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\towerDefense.dir\build.make CMakeFiles/towerDefense.dir/src/Tower.cpp.s
+.PHONY : src/Tower.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -589,6 +709,21 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... src/Animation.obj
+	@echo ... src/Animation.i
+	@echo ... src/Animation.s
+	@echo ... src/GameObject.obj
+	@echo ... src/GameObject.i
+	@echo ... src/GameObject.s
+	@echo ... src/GameObjectFactory.obj
+	@echo ... src/GameObjectFactory.i
+	@echo ... src/GameObjectFactory.s
+	@echo ... src/Monster.obj
+	@echo ... src/Monster.i
+	@echo ... src/Monster.s
+	@echo ... src/Tower.obj
+	@echo ... src/Tower.i
+	@echo ... src/Tower.s
 .PHONY : help
 
 
