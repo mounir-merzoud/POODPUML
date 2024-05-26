@@ -22,8 +22,8 @@
 		"files" : 
 		[
 			"CMakeLists.txt",
-			"C:/Users/Jean/SFML/SFML-2.6.1-windows-gcc-13.1.0-mingw-64-bit/SFML-2.6.1/lib/cmake/SFML/SFMLSharedTargets.cmake",
-			"C:/Users/Jean/SFML/SFML-2.6.1-windows-gcc-13.1.0-mingw-64-bit/SFML-2.6.1/lib/cmake/SFML/SFMLConfig.cmake"
+			"C:/Users/kamil/SFML-2.6.1-windows-gcc-13.1.0-mingw-64-bit/SFML-2.6.1/lib/cmake/SFML/SFMLSharedTargets.cmake",
+			"C:/Users/kamil/SFML-2.6.1-windows-gcc-13.1.0-mingw-64-bit/SFML-2.6.1/lib/cmake/SFML/SFMLConfig.cmake"
 		],
 		"nodes" : 
 		[
@@ -90,7 +90,7 @@
 				{
 					"backtrace" : 2,
 					"isSystem" : true,
-					"path" : "C:/Users/Jean/SFML/SFML-2.6.1-windows-gcc-13.1.0-mingw-64-bit/SFML-2.6.1/include"
+					"path" : "C:/Users/kamil/SFML-2.6.1-windows-gcc-13.1.0-mingw-64-bit/SFML-2.6.1/include"
 				}
 			],
 			"language" : "CXX",
@@ -115,22 +115,22 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "C:\\Users\\Jean\\SFML\\SFML-2.6.1-windows-gcc-13.1.0-mingw-64-bit\\SFML-2.6.1\\lib\\libsfml-graphics-d.a",
+				"fragment" : "C:\\Users\\kamil\\SFML-2.6.1-windows-gcc-13.1.0-mingw-64-bit\\SFML-2.6.1\\lib\\libsfml-graphics-d.a",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "C:\\Users\\Jean\\SFML\\SFML-2.6.1-windows-gcc-13.1.0-mingw-64-bit\\SFML-2.6.1\\lib\\libsfml-audio-d.a",
+				"fragment" : "C:\\Users\\kamil\\SFML-2.6.1-windows-gcc-13.1.0-mingw-64-bit\\SFML-2.6.1\\lib\\libsfml-audio-d.a",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 7,
-				"fragment" : "C:\\Users\\Jean\\SFML\\SFML-2.6.1-windows-gcc-13.1.0-mingw-64-bit\\SFML-2.6.1\\lib\\libsfml-window-d.a",
+				"fragment" : "C:\\Users\\kamil\\SFML-2.6.1-windows-gcc-13.1.0-mingw-64-bit\\SFML-2.6.1\\lib\\libsfml-window-d.a",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 8,
-				"fragment" : "C:\\Users\\Jean\\SFML\\SFML-2.6.1-windows-gcc-13.1.0-mingw-64-bit\\SFML-2.6.1\\lib\\libsfml-system-d.a",
+				"fragment" : "C:\\Users\\kamil\\SFML-2.6.1-windows-gcc-13.1.0-mingw-64-bit\\SFML-2.6.1\\lib\\libsfml-system-d.a",
 				"role" : "libraries"
 			},
 			{
