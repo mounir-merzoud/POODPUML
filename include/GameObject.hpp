@@ -2,7 +2,6 @@
 #define GameObject_hpp
 #include <SFML/Graphics.hpp>
 
-
 class GameObject {
     public:
         GameObject(float positionX, float positionY, int width, int height);
@@ -11,6 +10,7 @@ class GameObject {
         float positionY;
         int width;
         int height;
+        sf::Sprite sprite;
 };
 
 #endif

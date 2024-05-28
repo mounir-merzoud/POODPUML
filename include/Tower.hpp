@@ -2,16 +2,19 @@
 #define Tower_hpp
 #include <string>
 #include "GameObject.hpp"
+#include "Weapon.hpp"
+#include <memory>
 
 class Tower : public GameObject{
     public:
-        Tower(std::string name, float positionX, float positionY, int width, int height, int damage, float range, float rateOfFire, int price);
+        Tower(std::string name, float positionX, float positionY, int width, int height, std::shared_ptr<Weapon> weapon, int price, Animation& animation);
 
-        int damage;
-        float range;
-        float rateOfFire;
+         void update(float deltatime);
+
         int price;
         std::string name;
+        std::shared_ptr<Weapon> weapon;
+        Animation animation;
 };
 
 #endif

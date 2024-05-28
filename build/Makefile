@@ -642,6 +642,30 @@ src/Monster.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\towerDefense.dir\build.make CMakeFiles/towerDefense.dir/src/Monster.cpp.s
 .PHONY : src/Monster.cpp.s
 
+src/Projectile.obj: src/Projectile.cpp.obj
+.PHONY : src/Projectile.obj
+
+# target to build an object file
+src/Projectile.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\towerDefense.dir\build.make CMakeFiles/towerDefense.dir/src/Projectile.cpp.obj
+.PHONY : src/Projectile.cpp.obj
+
+src/Projectile.i: src/Projectile.cpp.i
+.PHONY : src/Projectile.i
+
+# target to preprocess a source file
+src/Projectile.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\towerDefense.dir\build.make CMakeFiles/towerDefense.dir/src/Projectile.cpp.i
+.PHONY : src/Projectile.cpp.i
+
+src/Projectile.s: src/Projectile.cpp.s
+.PHONY : src/Projectile.s
+
+# target to generate assembly for a file
+src/Projectile.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\towerDefense.dir\build.make CMakeFiles/towerDefense.dir/src/Projectile.cpp.s
+.PHONY : src/Projectile.cpp.s
+
 src/Tower.obj: src/Tower.cpp.obj
 .PHONY : src/Tower.obj
 
@@ -665,6 +689,30 @@ src/Tower.s: src/Tower.cpp.s
 src/Tower.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\towerDefense.dir\build.make CMakeFiles/towerDefense.dir/src/Tower.cpp.s
 .PHONY : src/Tower.cpp.s
+
+src/Weapon.obj: src/Weapon.cpp.obj
+.PHONY : src/Weapon.obj
+
+# target to build an object file
+src/Weapon.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\towerDefense.dir\build.make CMakeFiles/towerDefense.dir/src/Weapon.cpp.obj
+.PHONY : src/Weapon.cpp.obj
+
+src/Weapon.i: src/Weapon.cpp.i
+.PHONY : src/Weapon.i
+
+# target to preprocess a source file
+src/Weapon.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\towerDefense.dir\build.make CMakeFiles/towerDefense.dir/src/Weapon.cpp.i
+.PHONY : src/Weapon.cpp.i
+
+src/Weapon.s: src/Weapon.cpp.s
+.PHONY : src/Weapon.s
+
+# target to generate assembly for a file
+src/Weapon.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\towerDefense.dir\build.make CMakeFiles/towerDefense.dir/src/Weapon.cpp.s
+.PHONY : src/Weapon.cpp.s
 
 # Help Target
 help:
@@ -721,9 +769,15 @@ help:
 	@echo ... src/Monster.obj
 	@echo ... src/Monster.i
 	@echo ... src/Monster.s
+	@echo ... src/Projectile.obj
+	@echo ... src/Projectile.i
+	@echo ... src/Projectile.s
 	@echo ... src/Tower.obj
 	@echo ... src/Tower.i
 	@echo ... src/Tower.s
+	@echo ... src/Weapon.obj
+	@echo ... src/Weapon.i
+	@echo ... src/Weapon.s
 .PHONY : help
 
 

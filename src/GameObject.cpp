@@ -6,4 +6,5 @@ GameObject::GameObject(float positionX, float positionY, int width, int height)
     this->positionY = positionY;
     this->width = width;
     this->height = height;
+    this->sprite = sprite;
 }

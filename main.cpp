@@ -16,22 +16,42 @@
         { "walkLeft", { {30, 335, 65, 34}, {162, 335, 65, 34}, {287, 335, 65, 34}, {418, 335, 65, 34},
         {543, 335, 65, 34}, {674, 335, 65, 34}, {799, 335, 65, 34}, {930, 335, 65, 34} } }
         };
+    
+    std::vector<AnimationData> animationsTower01 = {
+        { "idle", { {0, 29, 64, 97} } }
+    };
+
+    std::vector<AnimationData> animationsWeapon01 = {
+        { "idle", { {30, 25, 35, 45} } }
+    };
+
+    std::vector<AnimationData> animationsArrow = {
+        { "idle", { {0, 0, 7, 40} } }
+    };
 
 int main() {
     sf::RenderWindow window(sf::VideoMode(1900, 1000), "SFML window");
 
-    Animation firebugAnimation(animationsFirebug, "walkRight", "assets/sprites/firebug.png");
+    Animation firebugAnimation(animationsFirebug, "walkRight", "assets/sprites/Monsters/firebug.png");
+    Animation tower01Animation(animationsTower01, "idle", "assets/sprites/Towers/Tower01.png");
+    Animation weapon01Animation(animationsWeapon01, "idle", "assets/sprites/Weapons/Tower01-Level01-Weapon.png");
+    Animation arrowAnimation(animationsArrow, "idle", "assets/sprites/Projectiles/Tower 01 - Level 01 - Projectile.png");
 
-    std::vector<Monster> monsters;
+    std::vector<std::shared_ptr<Monster>> monsters;
 
     auto firebug = GameObjectFactory::createMonster("Firebug", 100, 100, 70, 60, 100, 100.0f, firebugAnimation);
-    monsters.push_back(*firebug);
+    monsters.push_back(firebug);
 
     auto firebug2 = GameObjectFactory::createMonster("Firebug", 1200, 200, 70, 60, 100, 100.0f, firebugAnimation);
-    monsters.push_back(*firebug2);
+    monsters.push_back(firebug2);
+
+    auto arrow = GameObjectFactory::createProjectile(100, 100, 10, 10, 10, 100.0f, 0.0f, arrowAnimation);
+
+    auto weapon = GameObjectFactory::createWeapon("Crossbow", 100, 100, 35, 45, 100.0f, 1.0f, arrow, weapon01Animation);
+
+    auto tower = GameObjectFactory::createTower("Tower01", 100, 100, 64, 127, weapon, 100, tower01Animation);
 
 
-    sf::Sprite spriteFirebug;
 
     sf::Clock deltaTimeClock;
 
@@ -46,18 +66,19 @@ int main() {
         firebug->moveRight(deltaTime);
         firebug2->moveLeft(deltaTime);
 
-        if (firebugAnimation.animationName == "walkLeft"){
-            spriteFirebug.setScale({ -1, 1 });
-        }
 
         window.clear(sf::Color::White);
 
-        firebug->sprite.setPosition(firebug->positionX, firebug->positionY);
-        window.draw(firebug->sprite);
+        for (auto& monster : monsters) {
+            monster->update(deltaTime);
+        }
 
-        firebug2->sprite.setPosition(firebug2->positionX, firebug2->positionY);
-        window.draw(firebug2->sprite);
-
+        for (auto& monster : monsters) {
+        window.draw(monster->sprite);
+        }
+        tower->update(deltaTime);
+        window.draw(tower->sprite);
+        window.draw(tower->weapon->sprite);
 
         window.display();
     }

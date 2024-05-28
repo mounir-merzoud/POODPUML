@@ -5,6 +5,8 @@
 #include "GameObject.hpp"
 #include "Monster.hpp"
 #include "Tower.hpp"
+#include "Weapon.hpp"
+#include "Projectile.hpp"
 
 class GameObjectFactory {
     public:
@@ -15,7 +17,15 @@ class GameObjectFactory {
 
         static std::shared_ptr<Tower> createTower(
             const std::string& name, float positionX, float positionY, int width, int height,
-            int damage, float range, float rateOfFire, int price);
+            std::shared_ptr<Weapon> weapon, int price, Animation& animation);
+
+        static std::shared_ptr<Weapon> createWeapon(
+            const std::string& name, float positionX, float positionY, int width, int height,
+            float range, float rateOfFire, std::shared_ptr<Projectile> projectile, Animation animation);
+
+        static std::shared_ptr<Projectile> createProjectile(
+            float positionX, float positionY, int width, int height,
+            int damage, float speed, float angle, Animation& animation);
 };
 
 #endif

@@ -11,12 +11,12 @@ class Monster : public GameObject{
         void moveDown(float deltatime);
         void moveLeft(float deltatime);
         void moveRight(float deltatime);
+        void update(float deltatime);
 
         int health;
         float speed;
         std::string name;
         Animation animation;
-        sf::Sprite sprite;
 };
 
 #endif

@@ -15,6 +15,8 @@ add_executable(towerDefense
     src/Tower.cpp
     src/Animation.cpp
     src/GameObjectFactory.cpp
+    src/Weapon.cpp
+    src/Projectile.cpp
 )
 
 target_include_directories(towerDefense PRIVATE ${SFML_INCLUDE_DIR} src)
