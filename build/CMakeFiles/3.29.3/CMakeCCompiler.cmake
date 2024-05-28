@@ -1,4 +1,4 @@
-set(CMAKE_C_COMPILER "C:/MinGW/winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5/mingw64/bin/gcc.exe")
+set(CMAKE_C_COMPILER "C:/Program Files/mingw64/bin/gcc.exe")
 set(CMAKE_C_COMPILER_ARG1 "")
 set(CMAKE_C_COMPILER_ID "GNU")
 set(CMAKE_C_COMPILER_VERSION "13.1.0")
@@ -21,14 +21,14 @@ set(CMAKE_C_SIMULATE_VERSION "")
 
 
 
-set(CMAKE_AR "C:/MinGW/winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5/mingw64/bin/ar.exe")
-set(CMAKE_C_COMPILER_AR "C:/MinGW/winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5/mingw64/bin/gcc-ar.exe")
-set(CMAKE_RANLIB "C:/MinGW/winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5/mingw64/bin/ranlib.exe")
-set(CMAKE_C_COMPILER_RANLIB "C:/MinGW/winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5/mingw64/bin/gcc-ranlib.exe")
-set(CMAKE_LINKER "C:/MinGW/winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5/mingw64/bin/ld.exe")
+set(CMAKE_AR "C:/Program Files/mingw64/bin/ar.exe")
+set(CMAKE_C_COMPILER_AR "C:/Program Files/mingw64/bin/gcc-ar.exe")
+set(CMAKE_RANLIB "C:/Program Files/mingw64/bin/ranlib.exe")
+set(CMAKE_C_COMPILER_RANLIB "C:/Program Files/mingw64/bin/gcc-ranlib.exe")
+set(CMAKE_LINKER "C:/Program Files/mingw64/bin/ld.exe")
 set(CMAKE_LINKER_LINK "")
 set(CMAKE_LINKER_LLD "")
-set(CMAKE_C_COMPILER_LINKER "C:/MinGW/winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5/mingw64/x86_64-w64-mingw32/bin/ld.exe")
+set(CMAKE_C_COMPILER_LINKER "C:/Program Files/mingw64/x86_64-w64-mingw32/bin/ld.exe")
 set(CMAKE_C_COMPILER_LINKER_ID "GNU")
 set(CMAKE_C_COMPILER_LINKER_VERSION 2.40)
 set(CMAKE_C_COMPILER_LINKER_FRONTEND_VARIANT GNU)
@@ -74,7 +74,7 @@ endif()
 
 
 
-set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "C:/MinGW/winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5/mingw64/lib/gcc/x86_64-w64-mingw32/13.1.0/include;C:/MinGW/winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5/mingw64/include;C:/MinGW/winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5/mingw64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed;C:/MinGW/winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5/mingw64/x86_64-w64-mingw32/include")
-set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "mingw32;gcc;moldname;mingwex;kernel32;pthread;advapi32;shell32;user32;kernel32;mingw32;gcc;moldname;mingwex;kernel32")
-set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "C:/MinGW/winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5/mingw64/lib/gcc/x86_64-w64-mingw32/13.1.0;C:/MinGW/winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5/mingw64/lib/gcc;C:/MinGW/winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5/mingw64/x86_64-w64-mingw32/lib;C:/MinGW/winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5/mingw64/lib")
+set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "C:/Program Files/mingw64/lib/gcc/x86_64-w64-mingw32/13.1.0/include;C:/Program Files/mingw64/include;C:/Program Files/mingw64/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed;C:/Program Files/mingw64/x86_64-w64-mingw32/include;/MinGW/include")
+set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "")
+set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "")
 set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

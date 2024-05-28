@@ -1,8 +1,8 @@
 [
 {
-  "directory": "C:/Users/Jean/POODPUML/build",
-  "command": "C:\\MinGW\\winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5\\mingw64\\bin\\g++.exe  @CMakeFiles/towerDefense.dir/includes_CXX.rsp -g -o CMakeFiles\\towerDefense.dir\\main.cpp.obj -c C:\\Users\\Jean\\POODPUML\\main.cpp",
-  "file": "C:/Users/Jean/POODPUML/main.cpp",
+  "directory": "C:/Users/lo/Desktop/bbt/C++/POODPUML/build",
+  "command": "C:\\PROGRA~1\\mingw64\\bin\\G__~1.EXE  @CMakeFiles/towerDefense.dir/includes_CXX.rsp -g -o CMakeFiles\\towerDefense.dir\\main.cpp.obj -c C:\\Users\\lo\\Desktop\\bbt\\C++\\POODPUML\\main.cpp",
+  "file": "C:/Users/lo/Desktop/bbt/C++/POODPUML/main.cpp",
   "output": "CMakeFiles/towerDefense.dir/main.cpp.obj"
 }
 ]

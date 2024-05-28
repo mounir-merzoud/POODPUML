@@ -52,10 +52,10 @@ RM = "C:\Program Files\CMake\bin\cmake.exe" -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Jean\POODPUML
+CMAKE_SOURCE_DIR = C:\Users\lo\Desktop\bbt\C++\POODPUML
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Jean\POODPUML\build
+CMAKE_BINARY_DIR = C:\Users\lo\Desktop\bbt\C++\POODPUML\build
 
 # Utility rule file for ContinuousSubmit.
 
@@ -81,6 +81,6 @@ CMakeFiles/ContinuousSubmit.dir/clean:
 .PHONY : CMakeFiles/ContinuousSubmit.dir/clean
 
 CMakeFiles/ContinuousSubmit.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\Jean\POODPUML C:\Users\Jean\POODPUML C:\Users\Jean\POODPUML\build C:\Users\Jean\POODPUML\build C:\Users\Jean\POODPUML\build\CMakeFiles\ContinuousSubmit.dir\DependInfo.cmake "--color=$(COLOR)"
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\lo\Desktop\bbt\C++\POODPUML C:\Users\lo\Desktop\bbt\C++\POODPUML C:\Users\lo\Desktop\bbt\C++\POODPUML\build C:\Users\lo\Desktop\bbt\C++\POODPUML\build C:\Users\lo\Desktop\bbt\C++\POODPUML\build\CMakeFiles\ContinuousSubmit.dir\DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/ContinuousSubmit.dir/depend
 

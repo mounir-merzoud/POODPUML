@@ -291,7 +291,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "towerDefense::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-towerDefense-Debug-624f03dddc9af34f9595.json",
+					"jsonFile" : "target-towerDefense-Debug-ac38a8804b1c4473baec.json",
 					"name" : "towerDefense",
 					"projectIndex" : 0
 				}
@@ -301,8 +301,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/Jean/POODPUML/build",
-		"source" : "C:/Users/Jean/POODPUML"
+		"build" : "C:/Users/lo/Desktop/bbt/C++/POODPUML/build",
+		"source" : "C:/Users/lo/Desktop/bbt/C++/POODPUML"
 	},
 	"version" : 
 	{

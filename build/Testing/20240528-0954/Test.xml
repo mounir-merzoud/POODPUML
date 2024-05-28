@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="Win32-mingw32-make"
+	BuildStamp="20240528-0954-Experimental"
+	Name="LAPTOP-BR0FOBVE"
+	Generator="ctest-3.29.3"
+	CompilerName="C:/Program Files/mingw64/bin/g++.exe"
+	CompilerVersion="13.1.0"
+	OSName="Windows"
+	Hostname="LAPTOP-BR0FOBVE"
+	OSRelease=" Personal"
+	OSVersion=" (Build 19045)"
+	OSPlatform="AMD64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="14"
+	ProcessorCacheSize="-1"
+	NumberOfLogicalCPU="4"
+	NumberOfPhysicalCPU="2"
+	TotalVirtualMemory="25501"
+	TotalPhysicalMemory="8042"
+	LogicalProcessorsPerPhysical="2"
+	ProcessorClockFrequency="2712"
+	>
+	<Testing>
+		<StartDateTime>May 28 11:54 Paris, Madrid (heure d[NON-UTF-8-BYTE-0x92][NON-UTF-8-BYTE-0xE9]t[NON-UTF-8-BYTE-0xE9])</StartDateTime>
+		<StartTestTime>1716890045</StartTestTime>
+		<TestList/>
+		<EndDateTime>May 28 11:54 Paris, Madrid (heure d[NON-UTF-8-BYTE-0x92][NON-UTF-8-BYTE-0xE9]t[NON-UTF-8-BYTE-0xE9])</EndDateTime>
+		<EndTestTime>1716890045</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>
