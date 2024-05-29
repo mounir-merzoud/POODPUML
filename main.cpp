@@ -1,5 +1,6 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
+//#include <Tmxlite/Map.hpp>
 #include <iostream>
 
 enum MenuOption {
@@ -22,20 +23,19 @@ MenuOption gererClicMenu(sf::RenderWindow& fenetre, sf::Text& texteJouer, sf::Te
         return MenuOption::Quitter;
     }
     if (texteCredits.getGlobalBounds().contains(static_cast<sf::Vector2f>(positionSouris))) {
-        return MenuOption::Credits; 
+        return MenuOption::Credits;
     }
     return MenuOption::Aucun;
 }
-
 
 void mettreAJourSurvolMenu(sf::RenderWindow& fenetre, sf::Text& texteJouer, sf::Text& texteOptions, sf::Text& texteQuitter, sf::Text& texteCredits, MenuOption& optionSelectionnee) {
     sf::Vector2i positionSouris = sf::Mouse::getPosition(fenetre);
 
     if (optionSelectionnee == MenuOption::Aucun) {
-        texteJouer.setFillColor(sf::Color::Green);
-        texteOptions.setFillColor(sf::Color::Green);
+        texteJouer.setFillColor(sf::Color::Black);
+        texteOptions.setFillColor(sf::Color::Black);
         texteQuitter.setFillColor(sf::Color::Red);
-        texteCredits.setFillColor(sf::Color::Green); // Assurez-vous de mettre la couleur de survol initiale pour le bouton "Crédits"
+        texteCredits.setFillColor(sf::Color::Black);
 
         if (texteJouer.getGlobalBounds().contains(static_cast<sf::Vector2f>(positionSouris))) {
             texteJouer.setFillColor(sf::Color::Yellow);
@@ -44,7 +44,7 @@ void mettreAJourSurvolMenu(sf::RenderWindow& fenetre, sf::Text& texteJouer, sf::
         } else if (texteQuitter.getGlobalBounds().contains(static_cast<sf::Vector2f>(positionSouris))) {
             texteQuitter.setFillColor(sf::Color::Yellow);
         } else if (texteCredits.getGlobalBounds().contains(static_cast<sf::Vector2f>(positionSouris))) {
-            texteCredits.setFillColor(sf::Color::Yellow); // Changez la couleur de survol si la souris est sur le bouton "Crédits"
+            texteCredits.setFillColor(sf::Color::Yellow);
         }
     } else {
         if (optionSelectionnee == MenuOption::Jouer) {
@@ -54,11 +54,10 @@ void mettreAJourSurvolMenu(sf::RenderWindow& fenetre, sf::Text& texteJouer, sf::
         } else if (optionSelectionnee == MenuOption::Quitter) {
             texteQuitter.setFillColor(sf::Color::Black);
         } else if (optionSelectionnee == MenuOption::Credits) {
-            texteCredits.setFillColor(sf::Color::Black); // Assurez-vous que le texte du bouton "Crédits" est noir lorsqu'il est sélectionné
+            texteCredits.setFillColor(sf::Color::Black);
         }
     }
 }
-
 
 void centrerTexte(sf::Text& texte, sf::RenderWindow& fenetre) {
     sf::FloatRect rect = texte.getLocalBounds();
@@ -66,12 +65,11 @@ void centrerTexte(sf::Text& texte, sf::RenderWindow& fenetre) {
     texte.setPosition(fenetre.getSize().x / 2.0f, texte.getPosition().y);
 }
 
-void afficherFenetreOptions(sf::RenderWindow& fenetre, bool& musiqueActivee, sf::Music& musique) {
+void afficherFenetreOptions(bool& musiqueActivee, sf::Music& musique) {
     sf::RenderWindow fenetreOptions(sf::VideoMode(400, 200), "Options");
-    fenetreOptions.clear(sf::Color::White); // Fond blanc
 
     sf::Font police;
-    if (!police.loadFromFile("assets/Supermassive Black Hole - TTF.ttf")) { 
+    if (!police.loadFromFile("assets/Supermassive Black Hole - TTF.ttf")) {
         std::cerr << "Erreur de chargement de la police\n";
         return;
     }
@@ -88,13 +86,13 @@ void afficherFenetreOptions(sf::RenderWindow& fenetre, bool& musiqueActivee, sf:
         return;
     }
 
-     sf::Sprite spriteIconeActiver(textureIconeActiver);
-    spriteIconeActiver.setScale(0.1f, 0.1f); // Redimensionner l'icône
-    spriteIconeActiver.setPosition(50, 50); // Position de l'icône d'activation
+    sf::Sprite spriteIconeActiver(textureIconeActiver);
+    spriteIconeActiver.setScale(0.1f, 0.1f);
+    spriteIconeActiver.setPosition(50, 50);
 
     sf::Sprite spriteIconeDesactiver(textureIconeDesactiver);
-    spriteIconeDesactiver.setScale(0.1f, 0.1f); // Redimensionner l'icône
-    spriteIconeDesactiver.setPosition(150, 50); 
+    spriteIconeDesactiver.setScale(0.1f, 0.1f);
+    spriteIconeDesactiver.setPosition(150, 50);
 
     while (fenetreOptions.isOpen()) {
         sf::Event evenement;
@@ -115,17 +113,25 @@ void afficherFenetreOptions(sf::RenderWindow& fenetre, bool& musiqueActivee, sf:
             }
         }
 
+        fenetreOptions.clear(sf::Color::White); // Fond blanc
         fenetreOptions.draw(spriteIconeActiver);
         fenetreOptions.draw(spriteIconeDesactiver);
         fenetreOptions.display();
     }
+}
+sf::Texture chargerCarteTMX(const std::string& nomFichier) {
+    sf::Texture texture;
+    if (!texture.loadFromFile(nomFichier)) {
+        std::cerr << "Erreur de chargement de la carte TMX\n";
+    }
+    return texture;
 }
 
 int main() {
     sf::RenderWindow fenetre(sf::VideoMode(1000, 800), "Menu Tower Defense");
 
     sf::Font police;
-    if (!police.loadFromFile("assets/Supermassive Black Hole - TTF.ttf")) { 
+    if (!police.loadFromFile("assets/Supermassive Black Hole - TTF.ttf")) {
         std::cerr << "Erreur de chargement de la police\n";
         return -1;
     }
@@ -134,7 +140,7 @@ int main() {
         std::cerr << "Erreur de chargement de la musique\n";
         return -1;
     }
-    musique.setLoop(true); 
+    musique.setLoop(true);
     musique.play();
 
     sf::Text texteJouer;
@@ -157,8 +163,8 @@ int main() {
     texteCredits.setFont(police);
     texteCredits.setString("Credits");
     texteCredits.setCharacterSize(50);
-    texteCredits.setPosition(500, 500); // Positionnez-le où vous le souhaitez
-    texteCredits.setFillColor(sf::Color::Green); // Choisissez une couleur qui se distingue des autres boutons
+    texteCredits.setPosition(500, 500);
+    texteCredits.setFillColor(sf::Color::Green);
     centrerTexte(texteCredits, fenetre);
 
     sf::Text texteQuitter;
@@ -187,37 +193,40 @@ int main() {
                 fenetre.close();
             }
             if (evenement.type == sf::Event::MouseButtonPressed) {
-                optionSelectionnee = gererClicMenu(fenetre, texteJouer, texteOptions,texteCredits, texteQuitter);
+                optionSelectionnee = gererClicMenu(fenetre, texteJouer, texteOptions, texteQuitter, texteCredits);
                 if (optionSelectionnee == MenuOption::Jouer) {
                     std::cout << "Jouer sélectionné\n";
-                    // Démarrer le jeu
+                    // Charger la carte TMX
+                    sf::Texture carteTexture = chargerCarteTMX("Map/map.tmx");
+                    // Lancer le jeu
                 } else if (optionSelectionnee == MenuOption::Options) {
                     std::cout << "Options sélectionné\n";
-                    afficherFenetreOptions(fenetre, musiqueActivee, musique); // Fournir l'objet sf::Music
+                    afficherFenetreOptions(musiqueActivee, musique);
                 } else if (optionSelectionnee == MenuOption::Credits) {
-                    std::cout << "Credits sélectionnés\n";
-                } else if (optionSelectionnee == MenuOption::Quitter) {
-                    fenetre.close();
-                }
+                                    std::cout << "Credits sélectionné\n";
+                // Afficher les crédits
+            } else if (optionSelectionnee == MenuOption::Quitter) {
+                std::cout << "Quitter sélectionné\n";
+                fenetre.close();
             }
-        }
-
-        mettreAJourSurvolMenu(fenetre, texteJouer, texteOptions,texteCredits, texteQuitter,optionSelectionnee);
-
-        fenetre.clear();
-        fenetre.draw(sprite); 
-        fenetre.draw(texteJouer);
-        fenetre.draw(texteOptions);
-        fenetre.draw(texteCredits);
-        fenetre.draw(texteQuitter);
-        fenetre.display();
-
-        if (musiqueActivee) {
-            musique.play();
-        } else {
-            musique.stop();
         }
     }
 
-    return 0;
+    // Mettre à jour le survol du menu
+    mettreAJourSurvolMenu(fenetre, texteJouer, texteOptions, texteQuitter, texteCredits, optionSelectionnee);
+
+    // Effacer la fenêtre
+    fenetre.clear();
+
+    // Afficher le menu principal
+    fenetre.draw(sprite); 
+    fenetre.draw(texteJouer);
+    fenetre.draw(texteOptions);
+    fenetre.draw(texteQuitter);
+    fenetre.draw(texteCredits);
+    fenetre.display();
 }
+
+return 0;
+}
+
