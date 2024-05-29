@@ -21,6 +21,7 @@ void Monster::moveLeft(float deltatime)
     this->animation.setAnimation("walkLeft");
     if (this->name == "Firebug"){
         this->sprite.setScale(-1, 1);
+        this->sprite.setOrigin(this->sprite.getLocalBounds().width, 0);
     }
 }
 void Monster::moveRight(float deltatime)
