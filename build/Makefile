@@ -570,6 +570,30 @@ src/Animation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\towerDefense.dir\build.make CMakeFiles/towerDefense.dir/src/Animation.cpp.s
 .PHONY : src/Animation.cpp.s
 
+src/CollisionHandler.obj: src/CollisionHandler.cpp.obj
+.PHONY : src/CollisionHandler.obj
+
+# target to build an object file
+src/CollisionHandler.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\towerDefense.dir\build.make CMakeFiles/towerDefense.dir/src/CollisionHandler.cpp.obj
+.PHONY : src/CollisionHandler.cpp.obj
+
+src/CollisionHandler.i: src/CollisionHandler.cpp.i
+.PHONY : src/CollisionHandler.i
+
+# target to preprocess a source file
+src/CollisionHandler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\towerDefense.dir\build.make CMakeFiles/towerDefense.dir/src/CollisionHandler.cpp.i
+.PHONY : src/CollisionHandler.cpp.i
+
+src/CollisionHandler.s: src/CollisionHandler.cpp.s
+.PHONY : src/CollisionHandler.s
+
+# target to generate assembly for a file
+src/CollisionHandler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\towerDefense.dir\build.make CMakeFiles/towerDefense.dir/src/CollisionHandler.cpp.s
+.PHONY : src/CollisionHandler.cpp.s
+
 src/GameObject.obj: src/GameObject.cpp.obj
 .PHONY : src/GameObject.obj
 
@@ -760,6 +784,9 @@ help:
 	@echo ... src/Animation.obj
 	@echo ... src/Animation.i
 	@echo ... src/Animation.s
+	@echo ... src/CollisionHandler.obj
+	@echo ... src/CollisionHandler.i
+	@echo ... src/CollisionHandler.s
 	@echo ... src/GameObject.obj
 	@echo ... src/GameObject.i
 	@echo ... src/GameObject.s

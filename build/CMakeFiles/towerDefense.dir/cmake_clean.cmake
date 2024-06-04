@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/towerDefense.dir/main.cpp.obj.d"
   "CMakeFiles/towerDefense.dir/src/Animation.cpp.obj"
   "CMakeFiles/towerDefense.dir/src/Animation.cpp.obj.d"
+  "CMakeFiles/towerDefense.dir/src/CollisionHandler.cpp.obj"
+  "CMakeFiles/towerDefense.dir/src/CollisionHandler.cpp.obj.d"
   "CMakeFiles/towerDefense.dir/src/GameObject.cpp.obj"
   "CMakeFiles/towerDefense.dir/src/GameObject.cpp.obj.d"
   "CMakeFiles/towerDefense.dir/src/GameObjectFactory.cpp.obj"

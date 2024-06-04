@@ -1,7 +1,7 @@
 #include "Monster.hpp"
 
 Monster::Monster(std::string name, float positionX, float positionY, int width, int height, int health, float speed, Animation& animation)
-    : GameObject(positionX, positionY, width, height), name(name), health(health), speed(speed), animation(animation)
+    : GameObject(positionX, positionY, width, height), name(name), health(health), speed(speed), animation(animation), isDead(false)
 {
     this->sprite.setTexture(this->animation.texture);
 }
@@ -29,9 +29,20 @@ void Monster::moveRight(float deltatime)
     this->positionX += speed * deltatime;
     this->animation.setAnimation("walkRight");
 }
+void Monster::die(float deltatime)
+{
+    this->animation.setAnimation("die");
+    this->animation.playOnce = true;
+    this->animation.setFrameTime(0.15f);
+}
 void Monster::update(float deltatime)
 {
     this->animation.update(deltatime);
     this->animation.applyToSprite(this->sprite);
     this->sprite.setPosition(this->positionX, this->positionY);
+
+    if (this->health <= 0){
+        isDead = true;
+        this->die(deltatime);
+    }
 }

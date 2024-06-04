@@ -20,17 +20,21 @@ public:
 
     void update(float deltaTime);
     void applyToSprite(sf::Sprite& sprite);
-    void setAnimation(const std::string& animationName);
+    void setAnimation(const std::string& animationName, bool playOnce = false);
+    void setFrameTime(float frameTime);
+    bool isFinished() const;
 
     std::string animationName;
     sf::Texture texture;
-
-private:
-    std::vector<Frame> frames;    
-    float frameTime;
-    float elapsedTime;
     size_t currentFrame;
+    bool playOnce;
+
+private:    
+    std::vector<Frame> frames;
+    float frameTime;
+    float elapsedTime;    
     const std::vector<AnimationData>& animations;
+    bool finished;
 };
 
 #endif

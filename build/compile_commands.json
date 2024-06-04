@@ -46,5 +46,11 @@
   "command": "C:\\MinGW\\winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5\\mingw64\\bin\\g++.exe  @CMakeFiles/towerDefense.dir/includes_CXX.rsp -g -o CMakeFiles\\towerDefense.dir\\src\\Projectile.cpp.obj -c C:\\Users\\Jean\\POODPUML\\src\\Projectile.cpp",
   "file": "C:/Users/Jean/POODPUML/src/Projectile.cpp",
   "output": "CMakeFiles/towerDefense.dir/src/Projectile.cpp.obj"
+},
+{
+  "directory": "C:/Users/Jean/POODPUML/build",
+  "command": "C:\\MinGW\\winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5\\mingw64\\bin\\g++.exe  @CMakeFiles/towerDefense.dir/includes_CXX.rsp -g -o CMakeFiles\\towerDefense.dir\\src\\CollisionHandler.cpp.obj -c C:\\Users\\Jean\\POODPUML\\src\\CollisionHandler.cpp",
+  "file": "C:/Users/Jean/POODPUML/src/CollisionHandler.cpp",
+  "output": "CMakeFiles/towerDefense.dir/src/CollisionHandler.cpp.obj"
 }
 ]

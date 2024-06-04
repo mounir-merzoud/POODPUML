@@ -1,6 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include "GameObjectFactory.hpp"
 #include "Animation.hpp"
+#include "CollisionHandler.hpp"
 #include <iostream>
 #include <vector>
 #include <string>
@@ -14,7 +15,9 @@
         { "walkRight", { {30, 335, 65, 34}, {162, 335, 65, 34}, {287, 335, 65, 34}, {418, 335, 65, 34},
         {543, 335, 65, 34}, {674, 335, 65, 34}, {799, 335, 65, 34}, {930, 335, 65, 34} } },
         { "walkLeft", { {30, 335, 65, 34}, {162, 335, 65, 34}, {287, 335, 65, 34}, {418, 335, 65, 34},
-        {543, 335, 65, 34}, {674, 335, 65, 34}, {799, 335, 65, 34}, {930, 335, 65, 34} } }
+        {543, 335, 65, 34}, {674, 335, 65, 34}, {799, 335, 65, 34}, {930, 335, 65, 34} } },
+        { "die", { {31, 388, 65, 54}, {159, 388, 65, 54}, {287, 388, 65, 54}, {418, 388, 65, 54},
+        {543, 388, 65, 54}, {674, 388, 65, 54}, {799, 388, 65, 54}, {930, 388, 65, 54} } }
         };
     
     std::vector<AnimationData> animationsTower01 = {
@@ -22,7 +25,8 @@
     };
 
     std::vector<AnimationData> animationsWeapon01 = {
-        { "idle", { {30, 25, 35, 45} } }
+        { "idle", { {30, 25, 37, 45} } },
+        { "shoot", { {30, 25, 37, 45}, {123, 3, 41, 67}, {219, 36, 41, 34}, {315, 36, 41, 34}, {411, 36, 41, 34}, {509, 36, 37, 34} } }
     };
 
     std::vector<AnimationData> animationsArrow = {
@@ -33,6 +37,9 @@ int main() {
     sf::RenderWindow window(sf::VideoMode(1900, 1000), "SFML window");
 
     Animation firebugAnimation(animationsFirebug, "walkRight", "assets/sprites/Monsters/firebug.png");
+    Animation firebugDeathAnimation(animationsFirebug, "die", "assets/sprites/Monsters/firebug.png");
+    firebugDeathAnimation.setFrameTime(0.1f);
+
     Animation tower01Animation(animationsTower01, "idle", "assets/sprites/Towers/Tower01.png");
     Animation weapon01Animation(animationsWeapon01, "idle", "assets/sprites/Weapons/Tower01-Level01-Weapon.png");
     Animation arrowAnimation(animationsArrow, "idle", "assets/sprites/Projectiles/Tower 01 - Level 01 - Projectile.png");
@@ -41,13 +48,13 @@ int main() {
     std::vector<std::shared_ptr<Projectile>> projectiles;
     std::vector<std::shared_ptr<Tower>> towers;
 
-    auto firebug = GameObjectFactory::createMonster("Firebug", 300, 1500, 65, 54, 100, 100.0f, firebugAnimation);
+    auto firebug = GameObjectFactory::createMonster("Firebug", 50, 50, 65, 54, 100, 100.0f, firebugAnimation);
     monsters.push_back(firebug);
 
     auto firebug2 = GameObjectFactory::createMonster("Firebug", 700, 400, 65, 54, 100, 100.0f, firebugAnimation);
     monsters.push_back(firebug2);
 
-    auto arrow = GameObjectFactory::createProjectile(100, 100, 10, 10, 10, 1000.0f, 45, arrowAnimation);
+    auto arrow = GameObjectFactory::createProjectile(100, 100, 10, 10, 50, 1000.0f, 45, arrowAnimation);
 
     auto weapon = GameObjectFactory::createWeapon("Crossbow", 100, 100, 35, 45, 750.0f, 1.0f, arrow, weapon01Animation);
 
@@ -66,31 +73,31 @@ int main() {
         }
 
         float deltaTime = deltaTimeClock.restart().asSeconds();
-        firebug->moveUp(deltaTime);
-        firebug2->moveLeft(deltaTime);
+        
 
         float currentTime = clock.getElapsedTime().asSeconds();
 
-
         window.clear(sf::Color::White);
 
-        for (auto& monster : monsters) {
+        for (auto it = monsters.begin(); it != monsters.end();) {
+            auto& monster = *it;
+
+            if (monster->isDead && monster->animation.animationName != "die") {
+                monster->animation.setAnimation("die", true);
+            }
+
             monster->update(deltaTime);
-            
-            // Draw the monster
-            window.draw(monster->sprite);
 
-            // Create a rectangle for the hitbox
-            sf::RectangleShape hitbox(sf::Vector2f(monster->width, monster->height));
-            hitbox.setPosition(monster->positionX, monster->positionY);
+            if (monster->isDead && monster->animation.isFinished()) {
+                it = monsters.erase(it);
+            } else {
+                window.draw(monster->sprite);
+                ++it;
+            }
 
-            // Set the hitbox color
-            hitbox.setFillColor(sf::Color::Transparent);
-            hitbox.setOutlineColor(sf::Color::Red);
-            hitbox.setOutlineThickness(1.0f);
-
-            // Draw the hitbox
-            window.draw(hitbox);
+            if (!monster->isDead) {
+                monster->moveLeft(deltaTime);
+            }
         }
 
         tower->update(deltaTime);
@@ -108,13 +115,7 @@ int main() {
             window.draw(projectile->sprite);
         }
 
-        for (auto& monster : monsters) {
-            for (auto& projectile : projectiles) {                
-            if (monster->sprite.getGlobalBounds().intersects(projectile->sprite.getGlobalBounds())) {
-                std::cout << "Monster hit!" << std::endl;
-            }
-        }
-        }
+        CollisionHandler::handleCollisions(monsters, projectiles);
 
         window.display();
     }
