@@ -5,6 +5,7 @@
 #include <vector>
 #include <string>
 
+
 struct Frame {
     int x, y, width, height;
 };

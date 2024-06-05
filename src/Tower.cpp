@@ -39,7 +39,6 @@ std::shared_ptr<Projectile> Tower::shoot(std::vector<std::shared_ptr<Monster>>& 
     if (closestMonster) {
         float direction = std::atan2(closestMonster->positionY - this->weapon->positionY, closestMonster->positionX - this->weapon->positionX) * 180.0f / 3.14159f;
         weapon->sprite.rotate(direction - weapon->sprite.getRotation() + 90);
-        std::cout << "Angle : " << direction << std::endl;
         return weapon->shoot(closestMonster->positionX, closestMonster->positionY, direction, currentTime);
     }
     

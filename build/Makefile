@@ -594,6 +594,30 @@ src/CollisionHandler.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\towerDefense.dir\build.make CMakeFiles/towerDefense.dir/src/CollisionHandler.cpp.s
 .PHONY : src/CollisionHandler.cpp.s
 
+src/GameData.obj: src/GameData.cpp.obj
+.PHONY : src/GameData.obj
+
+# target to build an object file
+src/GameData.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\towerDefense.dir\build.make CMakeFiles/towerDefense.dir/src/GameData.cpp.obj
+.PHONY : src/GameData.cpp.obj
+
+src/GameData.i: src/GameData.cpp.i
+.PHONY : src/GameData.i
+
+# target to preprocess a source file
+src/GameData.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\towerDefense.dir\build.make CMakeFiles/towerDefense.dir/src/GameData.cpp.i
+.PHONY : src/GameData.cpp.i
+
+src/GameData.s: src/GameData.cpp.s
+.PHONY : src/GameData.s
+
+# target to generate assembly for a file
+src/GameData.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\towerDefense.dir\build.make CMakeFiles/towerDefense.dir/src/GameData.cpp.s
+.PHONY : src/GameData.cpp.s
+
 src/GameObject.obj: src/GameObject.cpp.obj
 .PHONY : src/GameObject.obj
 
@@ -714,6 +738,30 @@ src/Tower.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\towerDefense.dir\build.make CMakeFiles/towerDefense.dir/src/Tower.cpp.s
 .PHONY : src/Tower.cpp.s
 
+src/WaveManager.obj: src/WaveManager.cpp.obj
+.PHONY : src/WaveManager.obj
+
+# target to build an object file
+src/WaveManager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\towerDefense.dir\build.make CMakeFiles/towerDefense.dir/src/WaveManager.cpp.obj
+.PHONY : src/WaveManager.cpp.obj
+
+src/WaveManager.i: src/WaveManager.cpp.i
+.PHONY : src/WaveManager.i
+
+# target to preprocess a source file
+src/WaveManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\towerDefense.dir\build.make CMakeFiles/towerDefense.dir/src/WaveManager.cpp.i
+.PHONY : src/WaveManager.cpp.i
+
+src/WaveManager.s: src/WaveManager.cpp.s
+.PHONY : src/WaveManager.s
+
+# target to generate assembly for a file
+src/WaveManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\towerDefense.dir\build.make CMakeFiles/towerDefense.dir/src/WaveManager.cpp.s
+.PHONY : src/WaveManager.cpp.s
+
 src/Weapon.obj: src/Weapon.cpp.obj
 .PHONY : src/Weapon.obj
 
@@ -787,6 +835,9 @@ help:
 	@echo ... src/CollisionHandler.obj
 	@echo ... src/CollisionHandler.i
 	@echo ... src/CollisionHandler.s
+	@echo ... src/GameData.obj
+	@echo ... src/GameData.i
+	@echo ... src/GameData.s
 	@echo ... src/GameObject.obj
 	@echo ... src/GameObject.i
 	@echo ... src/GameObject.s
@@ -802,6 +853,9 @@ help:
 	@echo ... src/Tower.obj
 	@echo ... src/Tower.i
 	@echo ... src/Tower.s
+	@echo ... src/WaveManager.obj
+	@echo ... src/WaveManager.i
+	@echo ... src/WaveManager.s
 	@echo ... src/Weapon.obj
 	@echo ... src/Weapon.i
 	@echo ... src/Weapon.s

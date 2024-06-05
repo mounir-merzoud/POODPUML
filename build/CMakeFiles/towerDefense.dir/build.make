@@ -203,6 +203,36 @@ CMakeFiles/towerDefense.dir/src/CollisionHandler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/towerDefense.dir/src/CollisionHandler.cpp.s"
 	C:\MinGW\winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Jean\POODPUML\src\CollisionHandler.cpp -o CMakeFiles\towerDefense.dir\src\CollisionHandler.cpp.s
 
+CMakeFiles/towerDefense.dir/src/WaveManager.cpp.obj: CMakeFiles/towerDefense.dir/flags.make
+CMakeFiles/towerDefense.dir/src/WaveManager.cpp.obj: CMakeFiles/towerDefense.dir/includes_CXX.rsp
+CMakeFiles/towerDefense.dir/src/WaveManager.cpp.obj: C:/Users/Jean/POODPUML/src/WaveManager.cpp
+CMakeFiles/towerDefense.dir/src/WaveManager.cpp.obj: CMakeFiles/towerDefense.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Jean\POODPUML\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/towerDefense.dir/src/WaveManager.cpp.obj"
+	C:\MinGW\winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/towerDefense.dir/src/WaveManager.cpp.obj -MF CMakeFiles\towerDefense.dir\src\WaveManager.cpp.obj.d -o CMakeFiles\towerDefense.dir\src\WaveManager.cpp.obj -c C:\Users\Jean\POODPUML\src\WaveManager.cpp
+
+CMakeFiles/towerDefense.dir/src/WaveManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/towerDefense.dir/src/WaveManager.cpp.i"
+	C:\MinGW\winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Jean\POODPUML\src\WaveManager.cpp > CMakeFiles\towerDefense.dir\src\WaveManager.cpp.i
+
+CMakeFiles/towerDefense.dir/src/WaveManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/towerDefense.dir/src/WaveManager.cpp.s"
+	C:\MinGW\winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Jean\POODPUML\src\WaveManager.cpp -o CMakeFiles\towerDefense.dir\src\WaveManager.cpp.s
+
+CMakeFiles/towerDefense.dir/src/GameData.cpp.obj: CMakeFiles/towerDefense.dir/flags.make
+CMakeFiles/towerDefense.dir/src/GameData.cpp.obj: CMakeFiles/towerDefense.dir/includes_CXX.rsp
+CMakeFiles/towerDefense.dir/src/GameData.cpp.obj: C:/Users/Jean/POODPUML/src/GameData.cpp
+CMakeFiles/towerDefense.dir/src/GameData.cpp.obj: CMakeFiles/towerDefense.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Jean\POODPUML\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/towerDefense.dir/src/GameData.cpp.obj"
+	C:\MinGW\winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/towerDefense.dir/src/GameData.cpp.obj -MF CMakeFiles\towerDefense.dir\src\GameData.cpp.obj.d -o CMakeFiles\towerDefense.dir\src\GameData.cpp.obj -c C:\Users\Jean\POODPUML\src\GameData.cpp
+
+CMakeFiles/towerDefense.dir/src/GameData.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/towerDefense.dir/src/GameData.cpp.i"
+	C:\MinGW\winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Jean\POODPUML\src\GameData.cpp > CMakeFiles\towerDefense.dir\src\GameData.cpp.i
+
+CMakeFiles/towerDefense.dir/src/GameData.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/towerDefense.dir/src/GameData.cpp.s"
+	C:\MinGW\winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Jean\POODPUML\src\GameData.cpp -o CMakeFiles\towerDefense.dir\src\GameData.cpp.s
+
 # Object files for target towerDefense
 towerDefense_OBJECTS = \
 "CMakeFiles/towerDefense.dir/main.cpp.obj" \
@@ -213,7 +243,9 @@ towerDefense_OBJECTS = \
 "CMakeFiles/towerDefense.dir/src/GameObjectFactory.cpp.obj" \
 "CMakeFiles/towerDefense.dir/src/Weapon.cpp.obj" \
 "CMakeFiles/towerDefense.dir/src/Projectile.cpp.obj" \
-"CMakeFiles/towerDefense.dir/src/CollisionHandler.cpp.obj"
+"CMakeFiles/towerDefense.dir/src/CollisionHandler.cpp.obj" \
+"CMakeFiles/towerDefense.dir/src/WaveManager.cpp.obj" \
+"CMakeFiles/towerDefense.dir/src/GameData.cpp.obj"
 
 # External object files for target towerDefense
 towerDefense_EXTERNAL_OBJECTS =
@@ -227,6 +259,8 @@ towerDefense.exe: CMakeFiles/towerDefense.dir/src/GameObjectFactory.cpp.obj
 towerDefense.exe: CMakeFiles/towerDefense.dir/src/Weapon.cpp.obj
 towerDefense.exe: CMakeFiles/towerDefense.dir/src/Projectile.cpp.obj
 towerDefense.exe: CMakeFiles/towerDefense.dir/src/CollisionHandler.cpp.obj
+towerDefense.exe: CMakeFiles/towerDefense.dir/src/WaveManager.cpp.obj
+towerDefense.exe: CMakeFiles/towerDefense.dir/src/GameData.cpp.obj
 towerDefense.exe: CMakeFiles/towerDefense.dir/build.make
 towerDefense.exe: C:/Users/Jean/SFML/SFML-2.6.1-windows-gcc-13.1.0-mingw-64-bit/SFML-2.6.1/lib/libsfml-graphics-d.a
 towerDefense.exe: C:/Users/Jean/SFML/SFML-2.6.1-windows-gcc-13.1.0-mingw-64-bit/SFML-2.6.1/lib/libsfml-audio-d.a
@@ -235,7 +269,7 @@ towerDefense.exe: C:/Users/Jean/SFML/SFML-2.6.1-windows-gcc-13.1.0-mingw-64-bit/
 towerDefense.exe: CMakeFiles/towerDefense.dir/linkLibs.rsp
 towerDefense.exe: CMakeFiles/towerDefense.dir/objects1.rsp
 towerDefense.exe: CMakeFiles/towerDefense.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\Jean\POODPUML\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable towerDefense.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\Jean\POODPUML\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable towerDefense.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\towerDefense.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

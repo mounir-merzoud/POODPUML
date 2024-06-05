@@ -7,6 +7,7 @@
 #include "Tower.hpp"
 #include "Weapon.hpp"
 #include "Projectile.hpp"
+#include "Animation.hpp"
 
 class GameObjectFactory {
     public:
