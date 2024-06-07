@@ -83,14 +83,48 @@ CMakeFiles/towerDefense.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/towerDefense.dir/main.cpp.s"
 	C:\Users\kamil\winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\kamil\OneDrive\Bureau\POODPUML\main.cpp -o CMakeFiles\towerDefense.dir\main.cpp.s
 
+CMakeFiles/towerDefense.dir/src/Menu.cpp.obj: CMakeFiles/towerDefense.dir/flags.make
+CMakeFiles/towerDefense.dir/src/Menu.cpp.obj: CMakeFiles/towerDefense.dir/includes_CXX.rsp
+CMakeFiles/towerDefense.dir/src/Menu.cpp.obj: C:/Users/kamil/OneDrive/Bureau/POODPUML/src/Menu.cpp
+CMakeFiles/towerDefense.dir/src/Menu.cpp.obj: CMakeFiles/towerDefense.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\kamil\OneDrive\Bureau\POODPUML\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/towerDefense.dir/src/Menu.cpp.obj"
+	C:\Users\kamil\winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/towerDefense.dir/src/Menu.cpp.obj -MF CMakeFiles\towerDefense.dir\src\Menu.cpp.obj.d -o CMakeFiles\towerDefense.dir\src\Menu.cpp.obj -c C:\Users\kamil\OneDrive\Bureau\POODPUML\src\Menu.cpp
+
+CMakeFiles/towerDefense.dir/src/Menu.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/towerDefense.dir/src/Menu.cpp.i"
+	C:\Users\kamil\winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\kamil\OneDrive\Bureau\POODPUML\src\Menu.cpp > CMakeFiles\towerDefense.dir\src\Menu.cpp.i
+
+CMakeFiles/towerDefense.dir/src/Menu.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/towerDefense.dir/src/Menu.cpp.s"
+	C:\Users\kamil\winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\kamil\OneDrive\Bureau\POODPUML\src\Menu.cpp -o CMakeFiles\towerDefense.dir\src\Menu.cpp.s
+
+CMakeFiles/towerDefense.dir/src/Shope.cpp.obj: CMakeFiles/towerDefense.dir/flags.make
+CMakeFiles/towerDefense.dir/src/Shope.cpp.obj: CMakeFiles/towerDefense.dir/includes_CXX.rsp
+CMakeFiles/towerDefense.dir/src/Shope.cpp.obj: C:/Users/kamil/OneDrive/Bureau/POODPUML/src/Shope.cpp
+CMakeFiles/towerDefense.dir/src/Shope.cpp.obj: CMakeFiles/towerDefense.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\kamil\OneDrive\Bureau\POODPUML\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/towerDefense.dir/src/Shope.cpp.obj"
+	C:\Users\kamil\winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/towerDefense.dir/src/Shope.cpp.obj -MF CMakeFiles\towerDefense.dir\src\Shope.cpp.obj.d -o CMakeFiles\towerDefense.dir\src\Shope.cpp.obj -c C:\Users\kamil\OneDrive\Bureau\POODPUML\src\Shope.cpp
+
+CMakeFiles/towerDefense.dir/src/Shope.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/towerDefense.dir/src/Shope.cpp.i"
+	C:\Users\kamil\winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\kamil\OneDrive\Bureau\POODPUML\src\Shope.cpp > CMakeFiles\towerDefense.dir\src\Shope.cpp.i
+
+CMakeFiles/towerDefense.dir/src/Shope.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/towerDefense.dir/src/Shope.cpp.s"
+	C:\Users\kamil\winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\kamil\OneDrive\Bureau\POODPUML\src\Shope.cpp -o CMakeFiles\towerDefense.dir\src\Shope.cpp.s
+
 # Object files for target towerDefense
 towerDefense_OBJECTS = \
-"CMakeFiles/towerDefense.dir/main.cpp.obj"
+"CMakeFiles/towerDefense.dir/main.cpp.obj" \
+"CMakeFiles/towerDefense.dir/src/Menu.cpp.obj" \
+"CMakeFiles/towerDefense.dir/src/Shope.cpp.obj"
 
 # External object files for target towerDefense
 towerDefense_EXTERNAL_OBJECTS =
 
 towerDefense.exe: CMakeFiles/towerDefense.dir/main.cpp.obj
+towerDefense.exe: CMakeFiles/towerDefense.dir/src/Menu.cpp.obj
+towerDefense.exe: CMakeFiles/towerDefense.dir/src/Shope.cpp.obj
 towerDefense.exe: CMakeFiles/towerDefense.dir/build.make
 towerDefense.exe: C:/Users/kamil/SFML-2.6.1-windows-gcc-13.1.0-mingw-64-bit/SFML-2.6.1/lib/libsfml-graphics-d.a
 towerDefense.exe: C:/Users/kamil/SFML-2.6.1-windows-gcc-13.1.0-mingw-64-bit/SFML-2.6.1/lib/libsfml-audio-d.a
@@ -99,7 +133,7 @@ towerDefense.exe: C:/Users/kamil/SFML-2.6.1-windows-gcc-13.1.0-mingw-64-bit/SFML
 towerDefense.exe: CMakeFiles/towerDefense.dir/linkLibs.rsp
 towerDefense.exe: CMakeFiles/towerDefense.dir/objects1.rsp
 towerDefense.exe: CMakeFiles/towerDefense.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\kamil\OneDrive\Bureau\POODPUML\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable towerDefense.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\kamil\OneDrive\Bureau\POODPUML\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable towerDefense.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\towerDefense.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

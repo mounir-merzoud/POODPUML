@@ -1,1 +1,1 @@
--IC:/Users/kamil/OneDrive/Bureau/POODPUML/tinyxml -isystem "C:/Users/kamil/SFML-2.6.1-windows-gcc-13.1.0-mingw-64-bit/SFML-2.6.1/include"
+-IC:/Users/kamil/OneDrive/Bureau/POODPUML/src -IC:/Users/kamil/OneDrive/Bureau/POODPUML/include -isystem "C:/Users/kamil/SFML-2.6.1-windows-gcc-13.1.0-mingw-64-bit/SFML-2.6.1/include"
