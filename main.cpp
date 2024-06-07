@@ -11,30 +11,18 @@
 int main() {
     sf::RenderWindow window(sf::VideoMode(1900, 1000), "SFML window");
 
-    auto arrowLevel01 = GameObjectFactory::createProjectile(100, 100, 10, 10, 50, 1000.0f, 45, arrowLevel01Animation);
-    auto arrowLevel02 = GameObjectFactory::createProjectile(100, 100, 10, 10, 50, 1000.0f, 45, arrowLevel02Animation);
-    auto arrowLevel03 = GameObjectFactory::createProjectile(100, 100, 10, 10, 50, 1000.0f, 45, arrowLevel03Animation);
-
-    auto weaponLevel01 = GameObjectFactory::createWeapon("Crossbow", 100, 100, 35, 45, 750.0f, 1.0f, arrowLevel01, weapon01Level01Animation);
-    auto weaponLevel02 = GameObjectFactory::createWeapon("Crossbow", 100, 100, 35, 45, 750.0f, 1.0f, arrowLevel02, weapon01Level02Animation);
-    auto weaponLevel03 = GameObjectFactory::createWeapon("Crossbow", 100, 100, 35, 45, 750.0f, 1.0f, arrowLevel03, weapon01Level03Animation);
-
-    auto tower = GameObjectFactory::createTower("Tower01", 200, 400, 64, 127, weaponLevel01, 100, tower01Animation);
-    auto tower02 = GameObjectFactory::createTower("Tower02", 300, 400, 64, 127, weaponLevel02, 100, tower01Animation);
-    auto tower03 = GameObjectFactory::createTower("Tower03", 400, 400, 64, 127, weaponLevel03, 100, tower01Animation);
-
-    tower02->animation.setAnimation("level02", false);
-    tower03->animation.setAnimation("level03", false);
+    //tower02->animation.setAnimation("level02", false);
+    //tower03->animation.setAnimation("level03", false);
 
     towers.push_back(tower);
-    towers.push_back(tower02);
-    towers.push_back(tower03);
+    //towers.push_back(tower02);
+    //towers.push_back(tower03);
 
     
 
     sf::Clock deltaTimeClock;
     sf::Clock clock;
-    float currentTime;          
+    float currentTime;
     
     WaveManager waveManager = WaveManager(currentTime, monsters, 1, killCount);
 
@@ -43,6 +31,26 @@ int main() {
         while (window.pollEvent(event)) {
             if (event.type == sf::Event::Closed)
                 window.close();
+
+            if (event.type == sf::Event::MouseButtonPressed) {
+                if (event.mouseButton.button == sf::Mouse::Left) {
+                    sf::Vector2i mousePosition = sf::Mouse::getPosition(window);
+                    for (auto& tower : towers) {
+                        if (tower->sprite.getGlobalBounds().contains(mousePosition.x, mousePosition.y)) {
+                            switch (tower->price) {
+                                case 100:
+                                    tower->upgrade(weaponLevel02, 200);
+                                    break;
+                                case 200:
+                                    tower->upgrade(weaponLevel03, 300);
+                                    break;
+                                default:
+                                    break;
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         window.clear(sf::Color::White);

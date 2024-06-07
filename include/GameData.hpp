@@ -8,6 +8,7 @@
 #include "Tower.hpp"
 #include "Weapon.hpp"
 #include <memory>
+#include "GameObjectFactory.hpp"
 
     extern std::vector<AnimationData> animationsFirebug;
 
@@ -38,6 +39,18 @@
     extern std::vector<std::shared_ptr<Monster>> monsters;
     extern std::vector<std::shared_ptr<Projectile>> projectiles;
     extern std::vector<std::shared_ptr<Tower>> towers;
+
+    extern std::shared_ptr<Projectile> arrowLevel01;
+    extern std::shared_ptr<Projectile> arrowLevel02;
+    extern std::shared_ptr<Projectile> arrowLevel03;
+
+    extern std::shared_ptr<Weapon> weaponLevel01;
+    extern std::shared_ptr<Weapon> weaponLevel02;
+    extern std::shared_ptr<Weapon> weaponLevel03;
+
+    extern std::shared_ptr<Tower> tower;
+    //extern std::shared_ptr<Tower> tower02;
+    //extern std::shared_ptr<Tower> tower03;
 
     extern int killCount;
 

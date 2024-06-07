@@ -1038,6 +1038,7 @@ CMakeFiles/towerDefense.dir/src/GameData.cpp.obj: C:/Users/Jean/POODPUML/src/Gam
   C:/Users/Jean/POODPUML/include/Animation.hpp \
   C:/Users/Jean/POODPUML/include/GameData.hpp \
   C:/Users/Jean/POODPUML/include/GameObject.hpp \
+  C:/Users/Jean/POODPUML/include/GameObjectFactory.hpp \
   C:/Users/Jean/POODPUML/include/Monster.hpp \
   C:/Users/Jean/POODPUML/include/Projectile.hpp \
   C:/Users/Jean/POODPUML/include/Tower.hpp \

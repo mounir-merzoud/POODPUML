@@ -12,6 +12,7 @@ class Tower : public GameObject{
 
         void update(float deltatime);
         std::shared_ptr<Projectile> shoot(std::vector<std::shared_ptr<Monster>>& monsters, float currentTime);
+        void upgrade(std::shared_ptr<Weapon> weapon, int price);
 
         int price;
         std::string name;

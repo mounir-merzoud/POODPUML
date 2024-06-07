@@ -45,3 +45,30 @@ std::shared_ptr<Projectile> Tower::shoot(std::vector<std::shared_ptr<Monster>>& 
     weapon->animation.setAnimation("idle");
     return nullptr;
 }
+
+void Tower::upgrade(std::shared_ptr<Weapon> weapon, int price)
+{
+    this->weapon = weapon;
+    this->price = price;
+    switch (price) {
+        case 100:
+            this->animation.setAnimation("level01");
+            break;
+        case 200:
+            this->animation.setAnimation("level02");
+            break;
+        case 300:
+            this->animation.setAnimation("level03");
+            break;
+        default:
+            break;
+    }
+    this->width = this->animation.frames[0].width;
+    this->height = this->animation.frames[0].height;
+    this->weapon->width = this->weapon->animation.frames[0].width;
+    this->weapon->height = this->weapon->animation.frames[0].height;
+    
+    this->weapon->sprite.setOrigin(this->weapon->width / 2, this->weapon->height / 2);
+    this->weapon->positionX = this->positionX + this->width / 2;
+    this->weapon->positionY = this->positionY + 30;
+}
