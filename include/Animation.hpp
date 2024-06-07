@@ -29,9 +29,9 @@ public:
     sf::Texture texture;
     size_t currentFrame;
     bool playOnce;
-
-private:    
     std::vector<Frame> frames;
+
+private:        
     float frameTime;
     float elapsedTime;    
     const std::vector<AnimationData>& animations;

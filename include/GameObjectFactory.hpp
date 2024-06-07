@@ -27,6 +27,12 @@ class GameObjectFactory {
         static std::shared_ptr<Projectile> createProjectile(
             float positionX, float positionY, int width, int height,
             int damage, float speed, float angle, Animation& animation);
+        
+        static std::shared_ptr<Monster> createScorpion(
+            float positionX, float positionY, Animation& animation);
+
+        static std::shared_ptr<Monster> createFirebug(
+            float positionX, float positionY, Animation& animation);
 };
 
 #endif

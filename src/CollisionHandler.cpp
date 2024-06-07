@@ -9,7 +9,7 @@ void CollisionHandler::handleCollisions(std::vector<std::shared_ptr<Monster>>& m
 {
     for (auto monster : monsters) {
         for (auto it = projectiles.begin(); it != projectiles.end();) {
-            if (checkCollision(monster->sprite, (*it)->sprite)) {
+            if (checkCollision(monster->sprite, (*it)->sprite) && monster->health > 0) {
                 monster->health -= (*it)->damage;
                 std::cout << "Monster health: " << monster->health << std::endl;
                 it = projectiles.erase(it);
