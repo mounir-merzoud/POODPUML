@@ -6,7 +6,7 @@ Display::Display(std::string state)
 }
 
 void Display::draw(sf::Sprite& background, std::vector<std::shared_ptr<Monster>>& monsters, std::vector<std::shared_ptr<Projectile>>& projectiles,
-std::vector<std::shared_ptr<Tower>>& towers, int money, int waveNumber, sf::RenderWindow& window)
+std::vector<std::shared_ptr<Tower>>& towers, int money, int& waveNumber, sf::RenderWindow& window)
 {
     window.draw(background);
     for (auto it = monsters.begin(); it != monsters.end();) {

@@ -642,6 +642,30 @@ src/GameData.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\towerDefense.dir\build.make CMakeFiles/towerDefense.dir/src/GameData.cpp.s
 .PHONY : src/GameData.cpp.s
 
+src/GameManager.obj: src/GameManager.cpp.obj
+.PHONY : src/GameManager.obj
+
+# target to build an object file
+src/GameManager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\towerDefense.dir\build.make CMakeFiles/towerDefense.dir/src/GameManager.cpp.obj
+.PHONY : src/GameManager.cpp.obj
+
+src/GameManager.i: src/GameManager.cpp.i
+.PHONY : src/GameManager.i
+
+# target to preprocess a source file
+src/GameManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\towerDefense.dir\build.make CMakeFiles/towerDefense.dir/src/GameManager.cpp.i
+.PHONY : src/GameManager.cpp.i
+
+src/GameManager.s: src/GameManager.cpp.s
+.PHONY : src/GameManager.s
+
+# target to generate assembly for a file
+src/GameManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\towerDefense.dir\build.make CMakeFiles/towerDefense.dir/src/GameManager.cpp.s
+.PHONY : src/GameManager.cpp.s
+
 src/GameObject.obj: src/GameObject.cpp.obj
 .PHONY : src/GameObject.obj
 
@@ -865,6 +889,9 @@ help:
 	@echo ... src/GameData.obj
 	@echo ... src/GameData.i
 	@echo ... src/GameData.s
+	@echo ... src/GameManager.obj
+	@echo ... src/GameManager.i
+	@echo ... src/GameManager.s
 	@echo ... src/GameObject.obj
 	@echo ... src/GameObject.i
 	@echo ... src/GameObject.s

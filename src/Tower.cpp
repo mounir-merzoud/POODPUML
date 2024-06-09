@@ -17,6 +17,13 @@ void Tower::update(float deltatime)
     this->animation.applyToSprite(this->sprite);
     this->sprite.setPosition(this->positionX, this->positionY);
 
+    if (this->weapon->name == "Crossbow"){
+    this->weapon->animation.setFrameTime(weapon->rateOfFire / 6);
+    }
+    else {
+        this->weapon->animation.setFrameTime(weapon->rateOfFire / 15);
+    }
+
     this->weapon->sprite.setPosition(this->weapon->positionX, this->weapon->positionY);
     this->weapon->animation.update(deltatime);
     this->weapon->animation.applyToSprite(this->weapon->sprite);

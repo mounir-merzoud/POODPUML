@@ -77,7 +77,6 @@
 
     extern std::shared_ptr<Tower> tower;
     extern std::shared_ptr<Tower> tower02;
-    //extern std::shared_ptr<Tower> tower03;
 
     extern int killCount;
     extern int waveNumber;

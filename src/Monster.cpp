@@ -42,7 +42,7 @@ void Monster::moveRight(float deltatime)
     this->animation.setAnimation("walkRight");
     if (this->name == "Scorpion"){
         this->sprite.setScale(-1, 1);
-        this->sprite.setOrigin(this->sprite.getLocalBounds().width, 0);
+        this->sprite.setOrigin(this->sprite.getLocalBounds().left, 0);
     }
     this->width = this->animation.frames[0].width;
     this->height = this->animation.frames[0].height;

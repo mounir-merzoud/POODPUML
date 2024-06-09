@@ -6,7 +6,6 @@ Weapon::Weapon(std::string name, float positionX, float positionY, int width, in
     
 {
     this->animation.setAnimation("idle");
-    this->animation.setFrameTime(0.20f);
 }
 
 std::shared_ptr<Projectile> Weapon::shoot(float targetX, float targetY, float direction, float currentTime)

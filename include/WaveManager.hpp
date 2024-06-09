@@ -14,7 +14,6 @@ class WaveManager {
     private:
         float currentTime;
         std::vector<std::shared_ptr<Monster>>& monsters;
-        int waveNumber;
         int& killCount;
         float spawnTimer;
         bool waveActive;

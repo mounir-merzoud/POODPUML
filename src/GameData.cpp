@@ -147,7 +147,6 @@
 
     std::shared_ptr<Tower> tower = GameObjectFactory::createTower("Tower01", 200, 400, 64, 127, weapon01Level01, 100, tower01Animation);
     std::shared_ptr<Tower> tower02 = GameObjectFactory::createTower("Tower02", 310, 1100, 64, 127, weapon02Level01, 100, tower02Animation);
-    //std::shared_ptr<Tower> tower03 = GameObjectFactory::createTower("Tower03", 400, 400, 64, 127, weaponLevel03, 100, tower01Animation);
 
     int killCount = 0;
     int waveNumber = 1;

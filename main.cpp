@@ -4,6 +4,7 @@
 #include "WaveManager.hpp"
 #include "GameData.hpp"
 #include "Display.hpp"
+#include "GameManager.hpp"
 #include <iostream>
 #include <vector>
 #include <string>
@@ -35,6 +36,7 @@ int main() {
     
     WaveManager waveManager = WaveManager(currentTime, monsters, waveNumber, killCount);
     Display display = Display("game");
+    GameManager gameManager = GameManager("game");
 
     while (window.isOpen()) {
         sf::Event event;
@@ -49,10 +51,16 @@ int main() {
                         if (tower->sprite.getGlobalBounds().contains(mousePosition.x, mousePosition.y) && tower->name == "Tower01") {
                             switch (tower->price) {
                                 case 100:
-                                    tower->upgrade(weapon01Level02, 200);
+                                    if (money >= 200) {
+                                        tower->upgrade(weapon01Level02, 200);
+                                        money -= 200;
+                                    }
                                     break;
                                 case 200:
-                                    tower->upgrade(weapon01Level03, 300);
+                                    if (money >= 300) {
+                                        tower->upgrade(weapon01Level03, 300);
+                                        money -= 300;
+                                    }
                                     break;
                                 default:
                                     break;
@@ -61,10 +69,16 @@ int main() {
                         if (tower->sprite.getGlobalBounds().contains(mousePosition.x, mousePosition.y) && tower->name == "Tower02") {
                             switch (tower->price) {
                                 case 100:
-                                    tower->upgrade(weapon02Level02, 200);
+                                    if (money >= 200) {
+                                        tower->upgrade(weapon02Level02, 200);
+                                        money -= 200;
+                                    }
                                     break;
                                 case 200:
-                                    tower->upgrade(weapon02Level03, 300);
+                                    if (money >= 300) {
+                                        tower->upgrade(weapon02Level03, 300);
+                                        money -= 300;
+                                    }
                                     break;
                                 default:
                                     break;
@@ -81,44 +95,7 @@ int main() {
         currentTime = clock.getElapsedTime().asSeconds();
 
         waveManager.HandleSpawn(deltaTime);
-
-        for (auto it = monsters.begin(); it != monsters.end();) {
-            auto& monster = *it;
-
-            if (monster->isDead && monster->animation.animationName != "die") {
-                monster->animation.setAnimation("die", true);
-                monster->animation.setFrameTime(0.1f);
-            }
-
-            monster->update(deltaTime);
-
-            if (monster->isDead && monster->animation.isFinished()) {
-                it = monsters.erase(it);
-                killCount++;
-                money += 10;
-            } else {
-                ++it;
-            }
-
-            if (!monster->isDead) {
-                monster->moveDown(deltaTime);
-            }
-        }
-
-        for (auto& tower : towers) {
-            tower->update(deltaTime);           
-            
-            auto projectile = tower->shoot(monsters, currentTime);
-
-        if (projectile != nullptr) {
-            projectiles.push_back(projectile);
-        }
-
-        for (auto& projectile : projectiles) {
-            projectile->update(deltaTime);
-        }
-        }
-
+        gameManager.update(deltaTime, monsters, projectiles, towers, killCount, money, currentTime);
         CollisionHandler::handleCollisions(monsters, projectiles);
         display.draw(backgroundSprite, monsters, projectiles, towers, money, waveNumber, window);
 
