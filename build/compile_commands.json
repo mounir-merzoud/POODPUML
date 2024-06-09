@@ -7,6 +7,18 @@
 },
 {
   "directory": "C:/Users/kamil/OneDrive/Bureau/POODPUML/build",
+  "command": "C:\\Users\\kamil\\winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5\\mingw64\\bin\\g++.exe  @CMakeFiles/towerDefense.dir/includes_CXX.rsp -g -o CMakeFiles\\towerDefense.dir\\src\\Menu.cpp.obj -c C:\\Users\\kamil\\OneDrive\\Bureau\\POODPUML\\src\\Menu.cpp",
+  "file": "C:/Users/kamil/OneDrive/Bureau/POODPUML/src/Menu.cpp",
+  "output": "CMakeFiles/towerDefense.dir/src/Menu.cpp.obj"
+},
+{
+  "directory": "C:/Users/kamil/OneDrive/Bureau/POODPUML/build",
+  "command": "C:\\Users\\kamil\\winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5\\mingw64\\bin\\g++.exe  @CMakeFiles/towerDefense.dir/includes_CXX.rsp -g -o CMakeFiles\\towerDefense.dir\\src\\Shope.cpp.obj -c C:\\Users\\kamil\\OneDrive\\Bureau\\POODPUML\\src\\Shope.cpp",
+  "file": "C:/Users/kamil/OneDrive/Bureau/POODPUML/src/Shope.cpp",
+  "output": "CMakeFiles/towerDefense.dir/src/Shope.cpp.obj"
+},
+{
+  "directory": "C:/Users/kamil/OneDrive/Bureau/POODPUML/build",
   "command": "C:\\Users\\kamil\\winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5\\mingw64\\bin\\g++.exe  @CMakeFiles/towerDefense.dir/includes_CXX.rsp -g -o CMakeFiles\\towerDefense.dir\\src\\GameObject.cpp.obj -c C:\\Users\\kamil\\OneDrive\\Bureau\\POODPUML\\src\\GameObject.cpp",
   "file": "C:/Users/kamil/OneDrive/Bureau/POODPUML/src/GameObject.cpp",
   "output": "CMakeFiles/towerDefense.dir/src/GameObject.cpp.obj"

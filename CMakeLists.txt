@@ -10,6 +10,8 @@ include_directories(${SFML_INCLUDE_DIR} src include)
 
 add_executable(towerDefense
     main.cpp
+    src/Menu.cpp
+    src/Shope.cpp
     src/GameObject.cpp
     src/Monster.cpp
     src/Tower.cpp
