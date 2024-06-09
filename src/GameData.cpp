@@ -90,15 +90,15 @@
         {968, 66, 47, 60}, {1032, 66, 47, 60}, {1096, 66, 47, 60}, {1160, 66, 47, 60} } }
     };
 
-    std::vector<AnimationData> thunderLevel01 = {
+    std::vector<AnimationData> animationsthunderLevel01 = {
         { "idle", { {8, 6, 18, 18}, {38, 6, 18, 18}, {70, 6, 18, 18}, {104, 6, 18, 18}, {132, 6, 18, 18} } }
     };
 
-    std::vector<AnimationData> thunderLevel02 = {
+    std::vector<AnimationData> animationsthunderLevel02 = {
         { "idle", { {8, 6, 18, 18}, {38, 6, 18, 18}, {70, 6, 18, 18}, {104, 6, 18, 18}, {132, 6, 18, 18} } }
     };
 
-    std::vector<AnimationData> thunderLevel03 = {
+    std::vector<AnimationData> animationsthunderLevel03 = {
         { "idle", { {8, 6, 18, 18}, {38, 6, 18, 18}, {70, 6, 18, 18}, {104, 6, 18, 18}, {132, 6, 18, 18} } }
     };
         
@@ -116,14 +116,14 @@
     Animation arrowLevel02Animation(animationsArrowLevel02, "idle", "assets/sprites/Projectiles/Tower 01 - Level 02 - Projectile.png");
     Animation arrowLevel03Animation(animationsArrowLevel03, "idle", "assets/sprites/Projectiles/Tower 01 - Level 03 - Projectile.png");
 
-    Animation tower02Animation(animationsTower01, "level01", "assets/sprites/Towers/Tower02.png");
-    Animation weapon02Level01Animation(animationsWeapon01Level01, "idle", "assets/sprites/Weapons/Tower 02 - Level 01 - Weapon.png");
-    Animation weapon02Level02Animation(animationsWeapon01Level02, "idle", "assets/sprites/Weapons/Tower 02 - Level 02 - Weapon.png");
-    Animation weapon02Level03Animation(animationsWeapon01Level03, "idle", "assets/sprites/Weapons/Tower 02 - Level 03 - Weapon.png");
+    Animation tower02Animation(animationsTower02, "level01", "assets/sprites/Towers/Tower02.png");
+    Animation weapon02Level01Animation(animationsWeapon02Level01, "idle", "assets/sprites/Weapons/Tower 02 - Level 01 - Weapon.png");
+    Animation weapon02Level02Animation(animationsWeapon02Level02, "idle", "assets/sprites/Weapons/Tower 02 - Level 02 - Weapon.png");
+    Animation weapon02Level03Animation(animationsWeapon02Level03, "idle", "assets/sprites/Weapons/Tower 02 - Level 03 - Weapon.png");
 
-    Animation crystalLevel01Animation(animationsTower01, "level01", "assets/sprites/Towers/Tower 02 - Level 01 - Projectile.png");
-    Animation crystalLevel02Animation(animationsTower01, "level02", "assets/sprites/Towers/Tower 02 - Level 02 - Projectile.png");
-    Animation crystalLevel03Animation(animationsTower01, "level03", "assets/sprites/Towers/Tower 02 - Level 03 - Projectile.png");
+    Animation thunderLevel01Animation(animationsthunderLevel01, "idle", "assets/sprites/Projectiles/Tower 02 - Level 01 - Projectile.png");
+    Animation thunderLevel02Animation(animationsthunderLevel02, "idle", "assets/sprites/Projectiles/Tower 02 - Level 02 - Projectile.png");
+    Animation thunderLevel03Animation(animationsthunderLevel03, "idle", "assets/sprites/Projectiles/Tower 02 - Level 03 - Projectile.png");
 
     std::vector<std::shared_ptr<Monster>> monsters;
     std::vector<std::shared_ptr<Projectile>> projectiles;
@@ -137,8 +137,16 @@
     std::shared_ptr<Weapon> weapon01Level02 = GameObjectFactory::createWeapon("Crossbow", 100, 100, 35, 45, 750.0f, 1.0f, arrowLevel02, weapon01Level02Animation);
     std::shared_ptr<Weapon> weapon01Level03 = GameObjectFactory::createWeapon("Crossbow", 100, 100, 35, 45, 750.0f, 1.0f, arrowLevel03, weapon01Level03Animation);
 
+    std::shared_ptr<Projectile> thunderLevel01 = GameObjectFactory::createProjectile(100, 100, 10, 10, 100, 500.0f, 45, thunderLevel01Animation);
+    std::shared_ptr<Projectile> thunderLevel02 = GameObjectFactory::createProjectile(100, 100, 10, 10, 100, 500.0f, 45, thunderLevel02Animation);
+    std::shared_ptr<Projectile> thunderLevel03 = GameObjectFactory::createProjectile(100, 100, 10, 10, 100, 500.0f, 45, thunderLevel03Animation);
+
+    std::shared_ptr<Weapon> weapon02Level01 = GameObjectFactory::createWeapon("Crystal", 100, 100, 35, 45, 1000.0f, 3.0f, thunderLevel01, weapon02Level01Animation);
+    std::shared_ptr<Weapon> weapon02Level02 = GameObjectFactory::createWeapon("Crystal", 100, 100, 35, 45, 1000.0f, 3.0f, thunderLevel02, weapon02Level02Animation);
+    std::shared_ptr<Weapon> weapon02Level03 = GameObjectFactory::createWeapon("Crystal", 100, 100, 35, 45, 1000.0f, 3.0f, thunderLevel03, weapon02Level03Animation);
+
     std::shared_ptr<Tower> tower = GameObjectFactory::createTower("Tower01", 200, 400, 64, 127, weapon01Level01, 100, tower01Animation);
-    //std::shared_ptr<Tower> tower02 = GameObjectFactory::createTower("Tower02", 300, 400, 64, 127, weaponLevel02, 100, tower01Animation);
+    std::shared_ptr<Tower> tower02 = GameObjectFactory::createTower("Tower02", 200, 800, 64, 127, weapon02Level01, 100, tower02Animation);
     //std::shared_ptr<Tower> tower03 = GameObjectFactory::createTower("Tower03", 400, 400, 64, 127, weaponLevel03, 100, tower01Animation);
 
     int killCount = 0;

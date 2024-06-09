@@ -9,13 +9,13 @@
 
 
 int main() {
-    sf::RenderWindow window(sf::VideoMode(1900, 1000), "SFML window");
+    sf::RenderWindow window(sf::VideoMode(1600, 1500), "SFML window", sf::Style::Fullscreen);
 
     //tower02->animation.setAnimation("level02", false);
     //tower03->animation.setAnimation("level03", false);
 
-    towers.push_back(tower);
-    //towers.push_back(tower02);
+    //towers.push_back(tower);
+    towers.push_back(tower02);
     //towers.push_back(tower03);
 
     
@@ -29,7 +29,7 @@ int main() {
     while (window.isOpen()) {
         sf::Event event;
         while (window.pollEvent(event)) {
-            if (event.type == sf::Event::Closed)
+            if (event.type == sf::Event::Closed || event.key.code == sf::Keyboard::Escape)
                 window.close();
 
             if (event.type == sf::Event::MouseButtonPressed) {
@@ -43,6 +43,18 @@ int main() {
                                     break;
                                 case 200:
                                     tower->upgrade(weapon01Level03, 300);
+                                    break;
+                                default:
+                                    break;
+                            }
+                        }
+                        if (tower->sprite.getGlobalBounds().contains(mousePosition.x, mousePosition.y) && tower->name == "Tower02") {
+                            switch (tower->price) {
+                                case 100:
+                                    tower->upgrade(weapon02Level02, 200);
+                                    break;
+                                case 200:
+                                    tower->upgrade(weapon02Level03, 300);
                                     break;
                                 default:
                                     break;
@@ -89,7 +101,7 @@ int main() {
             }
 
             if (!monster->isDead) {
-                monster->moveLeft(deltaTime);
+                monster->moveDown(deltaTime);
             }
         }
 

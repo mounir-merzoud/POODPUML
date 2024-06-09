@@ -30,9 +30,9 @@
     extern std::vector<AnimationData> animationsWeapon02Level02;
     extern std::vector<AnimationData> animationsWeapon02Level03;
 
-    extern std::vector<AnimationData> thunderLevel01;
-    extern std::vector<AnimationData> thunderLevel02;
-    extern std::vector<AnimationData> thunderLevel03;
+    extern std::vector<AnimationData> animationsthunderLevel01;
+    extern std::vector<AnimationData> animationsthunderLevel02;
+    extern std::vector<AnimationData> animationsthunderLevel03;
 
     extern Animation firebugAnimation;
     extern Animation scorpionAnimation;
@@ -46,6 +46,15 @@
     extern Animation arrowLevel02Animation;
     extern Animation arrowLevel03Animation;
 
+    extern Animation tower02Animation;
+    extern Animation weapon02Level01Animation;
+    extern Animation weapon02Level02Animation;
+    extern Animation weapon02Level03Animation;
+
+    extern Animation thunderLevel01Animation;
+    extern Animation thunderLevel02Animation;
+    extern Animation thunderLevel03Animation;
+    
     extern std::vector<std::shared_ptr<Monster>> monsters;
     extern std::vector<std::shared_ptr<Projectile>> projectiles;
     extern std::vector<std::shared_ptr<Tower>> towers;
@@ -58,8 +67,16 @@
     extern std::shared_ptr<Weapon> weapon01Level02;
     extern std::shared_ptr<Weapon> weapon01Level03;
 
+    extern std::shared_ptr<Projectile> thunderLevel01;
+    extern std::shared_ptr<Projectile> thunderLevel02;
+    extern std::shared_ptr<Projectile> thunderLevel03;
+
+    extern std::shared_ptr<Weapon> weapon02Level01;
+    extern std::shared_ptr<Weapon> weapon02Level02;
+    extern std::shared_ptr<Weapon> weapon02Level03;
+
     extern std::shared_ptr<Tower> tower;
-    //extern std::shared_ptr<Tower> tower02;
+    extern std::shared_ptr<Tower> tower02;
     //extern std::shared_ptr<Tower> tower03;
 
     extern int killCount;
