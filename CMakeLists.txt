@@ -20,6 +20,7 @@ add_executable(towerDefense
     src/CollisionHandler.cpp
     src/WaveManager.cpp
     src/GameData.cpp
+    src/Display.cpp
 )
 
 target_include_directories(towerDefense PRIVATE ${SFML_INCLUDE_DIR} src)

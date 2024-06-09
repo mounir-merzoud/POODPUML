@@ -1,7 +1,7 @@
 #include "WaveManager.hpp"
 #include <random>
 
-WaveManager::WaveManager(float currentTime, std::vector<std::shared_ptr<Monster>>& monsters, int waveNumber, int& killCount)
+WaveManager::WaveManager(float currentTime, std::vector<std::shared_ptr<Monster>>& monsters, int& waveNumber, int& killCount)
     : currentTime(currentTime), monsters(monsters), waveNumber(waveNumber), killCount(killCount), spawnTimer(0.0f), timeRemaining(0.0f)
 {
 
@@ -32,8 +32,8 @@ void WaveManager::HandleSpawn(float deltatime) {
 void WaveManager::SpawnMonster() {
     int randomNumber = rand() % 100;
     if (randomNumber < 50 + this->waveNumber * 5) {
-        this->monsters.push_back(GameObjectFactory::createScorpion(300,5,scorpionAnimation));
+        this->monsters.push_back(GameObjectFactory::createScorpion(150,5,scorpionAnimation));
     } else {
-        this->monsters.push_back(GameObjectFactory::createFirebug(300,5,firebugAnimation));
+        this->monsters.push_back(GameObjectFactory::createFirebug(150,5,firebugAnimation));
     }
 }

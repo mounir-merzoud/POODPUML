@@ -1,7 +1,7 @@
 #include "Monster.hpp"
 
 Monster::Monster(std::string name, float positionX, float positionY, int width, int height, int health, float speed, Animation& animation)
-    : GameObject(positionX, positionY, width, height), name(name), health(health), speed(speed), animation(animation), isDead(false)
+    : GameObject(positionX, positionY, width, height), name(name), health(health), speed(speed), animation(animation), isDead(false), maxHealth(health)
 {
     this->sprite.setTexture(this->animation.texture);
     this->width = this->animation.frames[0].width;

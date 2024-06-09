@@ -80,5 +80,9 @@
     //extern std::shared_ptr<Tower> tower03;
 
     extern int killCount;
+    extern int waveNumber;
+    extern float currentTime;
+    extern int money;
+    extern int lives;
 
 #endif

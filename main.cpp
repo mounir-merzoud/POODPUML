@@ -3,6 +3,7 @@
 #include "CollisionHandler.hpp"
 #include "WaveManager.hpp"
 #include "GameData.hpp"
+#include "Display.hpp"
 #include <iostream>
 #include <vector>
 #include <string>
@@ -11,12 +12,8 @@
 int main() {
     sf::RenderWindow window(sf::VideoMode(775, 775), "SFML window", sf::Style::Fullscreen);
 
-    //tower02->animation.setAnimation("level02", false);
-    //tower03->animation.setAnimation("level03", false);
-
-    //towers.push_back(tower);
+    towers.push_back(tower);
     towers.push_back(tower02);
-    //towers.push_back(tower03);
 
     //load background image
     sf::Texture backgroundTexture;
@@ -36,7 +33,8 @@ int main() {
     sf::Clock clock;
     float currentTime;
     
-    WaveManager waveManager = WaveManager(currentTime, monsters, 1, killCount);
+    WaveManager waveManager = WaveManager(currentTime, monsters, waveNumber, killCount);
+    Display display = Display("game");
 
     while (window.isOpen()) {
         sf::Event event;
@@ -77,7 +75,7 @@ int main() {
             }
         }
 
-        window.draw(backgroundSprite);
+        
                 
         float deltaTime = deltaTimeClock.restart().asSeconds();
         currentTime = clock.getElapsedTime().asSeconds();
@@ -86,23 +84,6 @@ int main() {
 
         for (auto it = monsters.begin(); it != monsters.end();) {
             auto& monster = *it;
-
-            // set scale
-            if (monster->name == "Scorpion") {
-                monster->sprite.setScale(1.5f, 1.5f);
-                monster->width = monster->animation.frames[0].width * 1.5f;
-                monster->height = monster->animation.frames[0].height * 1.5f;
-            }
-
-            // Draw Hitbox
-
-            sf::RectangleShape hitbox;
-            hitbox.setSize(sf::Vector2f(monster->width, monster->height));
-            hitbox.setPosition(monster->positionX, monster->positionY);
-            hitbox.setFillColor(sf::Color::Transparent);
-            hitbox.setOutlineColor(sf::Color::Red);
-            hitbox.setOutlineThickness(1.0f);
-            window.draw(hitbox);
 
             if (monster->isDead && monster->animation.animationName != "die") {
                 monster->animation.setAnimation("die", true);
@@ -114,8 +95,8 @@ int main() {
             if (monster->isDead && monster->animation.isFinished()) {
                 it = monsters.erase(it);
                 killCount++;
+                money += 10;
             } else {
-                window.draw(monster->sprite);
                 ++it;
             }
 
@@ -125,9 +106,7 @@ int main() {
         }
 
         for (auto& tower : towers) {
-            tower->update(deltaTime);
-            window.draw(tower->sprite);
-            window.draw(tower->weapon->sprite);            
+            tower->update(deltaTime);           
             
             auto projectile = tower->shoot(monsters, currentTime);
 
@@ -137,13 +116,12 @@ int main() {
 
         for (auto& projectile : projectiles) {
             projectile->update(deltaTime);
-            window.draw(projectile->sprite);
         }
         }
 
         CollisionHandler::handleCollisions(monsters, projectiles);
+        display.draw(backgroundSprite, monsters, projectiles, towers, money, waveNumber, window);
 
-        window.display();
     }
     return 0;
 }

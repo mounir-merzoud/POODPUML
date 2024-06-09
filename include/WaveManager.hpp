@@ -7,7 +7,7 @@
 
 class WaveManager {
     public:
-        WaveManager(float currentTime, std::vector<std::shared_ptr<Monster>>& monsters, int waveNumber, int& killCount);
+        WaveManager(float currentTime, std::vector<std::shared_ptr<Monster>>& monsters, int& waveNumber, int& killCount);
         void HandleSpawn(float deltaTime);
         void SpawnMonster();
 

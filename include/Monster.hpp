@@ -20,6 +20,7 @@ class Monster : public GameObject{
         std::string name;
         Animation animation;
         bool isDead;
+        int maxHealth;
 };
 
 #endif

@@ -28,11 +28,11 @@ std::shared_ptr<Projectile> GameObjectFactory::createProjectile(
 std::shared_ptr<Monster> GameObjectFactory::createScorpion(
     float positionX, float positionY, Animation& animation)
 {
-    return std::make_shared<Monster>("Scorpion", positionX, positionY, 64, 64, 100, 50, animation);
+    return std::make_shared<Monster>("Scorpion", positionX, positionY, 64, 64, 200, 50, animation);
 }
 
 std::shared_ptr<Monster> GameObjectFactory::createFirebug(
     float positionX, float positionY, Animation& animation)
 {
-    return std::make_shared<Monster>("Firebug", positionX, positionY, 64, 64, 50, 100, animation);
+    return std::make_shared<Monster>("Firebug", positionX, positionY, 64, 64, 100, 100, animation);
 }

@@ -129,17 +129,17 @@
     std::vector<std::shared_ptr<Projectile>> projectiles;
     std::vector<std::shared_ptr<Tower>> towers;
 
-    std::shared_ptr<Projectile> arrowLevel01 = GameObjectFactory::createProjectile(100, 100, 10, 10, 50, 1000.0f, 45, arrowLevel01Animation);
-    std::shared_ptr<Projectile> arrowLevel02 = GameObjectFactory::createProjectile(100, 100, 10, 10, 50, 1000.0f, 45, arrowLevel02Animation);
-    std::shared_ptr<Projectile> arrowLevel03 = GameObjectFactory::createProjectile(100, 100, 10, 10, 50, 1000.0f, 45, arrowLevel03Animation);
+    std::shared_ptr<Projectile> arrowLevel01 = GameObjectFactory::createProjectile(100, 100, 10, 10, 25, 1000.0f, 45, arrowLevel01Animation);
+    std::shared_ptr<Projectile> arrowLevel02 = GameObjectFactory::createProjectile(100, 100, 10, 10, 50, 1250.0f, 45, arrowLevel02Animation);
+    std::shared_ptr<Projectile> arrowLevel03 = GameObjectFactory::createProjectile(100, 100, 10, 10, 75, 1500.0f, 45, arrowLevel03Animation);
 
-    std::shared_ptr<Weapon> weapon01Level01 = GameObjectFactory::createWeapon("Crossbow", 100, 100, 35, 45, 750.0f, 1.0f, arrowLevel01, weapon01Level01Animation);
+    std::shared_ptr<Weapon> weapon01Level01 = GameObjectFactory::createWeapon("Crossbow", 100, 100, 35, 45, 750.0f, 1.5f, arrowLevel01, weapon01Level01Animation);
     std::shared_ptr<Weapon> weapon01Level02 = GameObjectFactory::createWeapon("Crossbow", 100, 100, 35, 45, 750.0f, 1.0f, arrowLevel02, weapon01Level02Animation);
-    std::shared_ptr<Weapon> weapon01Level03 = GameObjectFactory::createWeapon("Crossbow", 100, 100, 35, 45, 750.0f, 1.0f, arrowLevel03, weapon01Level03Animation);
+    std::shared_ptr<Weapon> weapon01Level03 = GameObjectFactory::createWeapon("Crossbow", 100, 100, 35, 45, 750.0f, 0.75f, arrowLevel03, weapon01Level03Animation);
 
     std::shared_ptr<Projectile> thunderLevel01 = GameObjectFactory::createProjectile(100, 100, 10, 10, 100, 500.0f, 45, thunderLevel01Animation);
-    std::shared_ptr<Projectile> thunderLevel02 = GameObjectFactory::createProjectile(100, 100, 10, 10, 100, 500.0f, 45, thunderLevel02Animation);
-    std::shared_ptr<Projectile> thunderLevel03 = GameObjectFactory::createProjectile(100, 100, 10, 10, 100, 500.0f, 45, thunderLevel03Animation);
+    std::shared_ptr<Projectile> thunderLevel02 = GameObjectFactory::createProjectile(100, 100, 10, 10, 100, 750.0f, 45, thunderLevel02Animation);
+    std::shared_ptr<Projectile> thunderLevel03 = GameObjectFactory::createProjectile(100, 100, 10, 10, 100, 1000.0f, 45, thunderLevel03Animation);
 
     std::shared_ptr<Weapon> weapon02Level01 = GameObjectFactory::createWeapon("Crystal", 100, 100, 35, 45, 1000.0f, 3.0f, thunderLevel01, weapon02Level01Animation);
     std::shared_ptr<Weapon> weapon02Level02 = GameObjectFactory::createWeapon("Crystal", 100, 100, 35, 45, 1000.0f, 3.0f, thunderLevel02, weapon02Level02Animation);
@@ -150,3 +150,7 @@
     //std::shared_ptr<Tower> tower03 = GameObjectFactory::createTower("Tower03", 400, 400, 64, 127, weaponLevel03, 100, tower01Animation);
 
     int killCount = 0;
+    int waveNumber = 1;
+    float currentTime = 0.0f;
+    int money = 200;
+    int lives = 5;
