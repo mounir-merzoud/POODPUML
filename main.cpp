@@ -9,7 +9,7 @@
 
 
 int main() {
-    sf::RenderWindow window(sf::VideoMode(1600, 1500), "SFML window", sf::Style::Fullscreen);
+    sf::RenderWindow window(sf::VideoMode(775, 775), "SFML window", sf::Style::Fullscreen);
 
     //tower02->animation.setAnimation("level02", false);
     //tower03->animation.setAnimation("level03", false);
@@ -18,7 +18,19 @@ int main() {
     towers.push_back(tower02);
     //towers.push_back(tower03);
 
-    
+    //load background image
+    sf::Texture backgroundTexture;
+    if (!backgroundTexture.loadFromFile("assets/sprites/bkg.png")) {
+        std::cerr << "Failed to load background image" << std::endl;
+        return 1;
+    }
+    sf::Sprite backgroundSprite(backgroundTexture);
+
+    sf::Vector2u textureSize = backgroundTexture.getSize();
+    sf::Vector2u windowSize = window.getSize();
+    float scaleX = (float)windowSize.x / textureSize.x;
+    float scaleY = (float)windowSize.y / textureSize.y;
+    backgroundSprite.setScale(scaleX, scaleY);
 
     sf::Clock deltaTimeClock;
     sf::Clock clock;
@@ -65,7 +77,7 @@ int main() {
             }
         }
 
-        window.clear(sf::Color::White);
+        window.draw(backgroundSprite);
                 
         float deltaTime = deltaTimeClock.restart().asSeconds();
         currentTime = clock.getElapsedTime().asSeconds();
@@ -74,6 +86,13 @@ int main() {
 
         for (auto it = monsters.begin(); it != monsters.end();) {
             auto& monster = *it;
+
+            // set scale
+            if (monster->name == "Scorpion") {
+                monster->sprite.setScale(1.5f, 1.5f);
+                monster->width = monster->animation.frames[0].width * 1.5f;
+                monster->height = monster->animation.frames[0].height * 1.5f;
+            }
 
             // Draw Hitbox
 
