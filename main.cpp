@@ -36,13 +36,13 @@ int main() {
                 if (event.mouseButton.button == sf::Mouse::Left) {
                     sf::Vector2i mousePosition = sf::Mouse::getPosition(window);
                     for (auto& tower : towers) {
-                        if (tower->sprite.getGlobalBounds().contains(mousePosition.x, mousePosition.y)) {
+                        if (tower->sprite.getGlobalBounds().contains(mousePosition.x, mousePosition.y) && tower->name == "Tower01") {
                             switch (tower->price) {
                                 case 100:
-                                    tower->upgrade(weaponLevel02, 200);
+                                    tower->upgrade(weapon01Level02, 200);
                                     break;
                                 case 200:
-                                    tower->upgrade(weaponLevel03, 300);
+                                    tower->upgrade(weapon01Level03, 300);
                                     break;
                                 default:
                                     break;
