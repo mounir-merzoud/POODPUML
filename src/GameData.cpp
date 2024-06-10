@@ -153,3 +153,4 @@
     float currentTime = 0.0f;
     int money = 200;
     int lives = 5;
+    std::string state = "game";

@@ -1,8 +1,9 @@
 #include "GameManager.hpp"
 
-GameManager::GameManager(std::string state)
+GameManager::GameManager(std::string& state)
+    : state(state)
 {
-    this->state = state;
+
 }
 
 void GameManager::update(float deltaTime, std::vector<std::shared_ptr<Monster>>& monsters,
@@ -33,6 +34,7 @@ std::vector<std::shared_ptr<Projectile>>& projectiles, std::vector<std::shared_p
             handleMovement(deltaTime, monster);
         }
     }
+    checkLose(monsters, lives);
 
         for (auto& tower : towers) {
             tower->update(deltaTime);           
@@ -67,5 +69,21 @@ void GameManager::handleMovement(float deltatime, std::shared_ptr<Monster>& mons
     else if ((monster->positionX < 200) || (monster->positionX > 1000 && monster->positionY > 300 && monster->positionY < 1000) || (monster->positionX > 1600)){
         std::cout << "move down" << std::endl;
         monster->moveDown(deltatime);
+    }
+}
+
+void GameManager::checkLose(std::vector<std::shared_ptr<Monster>>& monsters, int& lives)
+{
+    for (auto it = monsters.begin(); it != monsters.end();) {
+        auto& monster = *it;
+        if (monster->positionX > 2500) {
+            lives--;
+            it = monsters.erase(it);
+        } else {
+            ++it;
+        }
+    }
+    if (lives <= 0) {
+        state = "gameover";
     }
 }

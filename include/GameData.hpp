@@ -83,5 +83,6 @@
     extern float currentTime;
     extern int money;
     extern int lives;
+    extern std::string state;
 
 #endif

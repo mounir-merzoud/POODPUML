@@ -14,6 +14,8 @@ void Monster::moveUp(float deltatime)
     this->animation.setAnimation("walkUp");
     this->width = this->animation.frames[0].width;
     this->height = this->animation.frames[0].height;
+    this->sprite.setScale(1, 1);
+    this->sprite.setOrigin(0, 0);
 }
 
 void Monster::moveDown(float deltatime)
@@ -22,6 +24,8 @@ void Monster::moveDown(float deltatime)
     this->animation.setAnimation("walkDown");
     this->width = this->animation.frames[0].width;
     this->height = this->animation.frames[0].height;
+    this->sprite.setScale(1, 1);
+    this->sprite.setOrigin(0, 0);
 }
 
 void Monster::moveLeft(float deltatime)
@@ -31,6 +35,10 @@ void Monster::moveLeft(float deltatime)
     if (this->name == "Firebug"){
         this->sprite.setScale(-1, 1);
         this->sprite.setOrigin(this->sprite.getLocalBounds().width, 0);
+    }
+    else {
+        this->sprite.setScale(1, 1);
+        this->sprite.setOrigin(0, 0);
     }
     this->width = this->animation.frames[0].width;
     this->height = this->animation.frames[0].height;
@@ -43,6 +51,10 @@ void Monster::moveRight(float deltatime)
     if (this->name == "Scorpion"){
         this->sprite.setScale(-1, 1);
         this->sprite.setOrigin(this->sprite.getLocalBounds().left, 0);
+    }
+    else {
+        this->sprite.setScale(1, 1);
+        this->sprite.setOrigin(0, 0);
     }
     this->width = this->animation.frames[0].width;
     this->height = this->animation.frames[0].height;

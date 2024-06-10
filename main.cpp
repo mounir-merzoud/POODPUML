@@ -35,8 +35,8 @@ int main() {
     float currentTime;
     
     WaveManager waveManager = WaveManager(currentTime, monsters, waveNumber, killCount);
-    Display display = Display("game");
-    GameManager gameManager = GameManager("game");
+    Display display = Display(state);
+    GameManager gameManager = GameManager(state);
 
     while (window.isOpen()) {
         sf::Event event;
@@ -97,7 +97,7 @@ int main() {
         waveManager.HandleSpawn(deltaTime);
         gameManager.update(deltaTime, monsters, projectiles, towers, killCount, money, currentTime);
         CollisionHandler::handleCollisions(monsters, projectiles);
-        display.draw(backgroundSprite, monsters, projectiles, towers, money, waveNumber, window);
+        display.draw(backgroundSprite, monsters, projectiles, towers, money, waveNumber, window, lives);
 
     }
     return 0;
