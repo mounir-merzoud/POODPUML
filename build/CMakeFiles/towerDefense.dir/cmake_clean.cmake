@@ -15,6 +15,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/towerDefense.dir/src/GameObject.cpp.obj.d"
   "CMakeFiles/towerDefense.dir/src/GameObjectFactory.cpp.obj"
   "CMakeFiles/towerDefense.dir/src/GameObjectFactory.cpp.obj.d"
+  "CMakeFiles/towerDefense.dir/src/Menu.cpp.obj"
+  "CMakeFiles/towerDefense.dir/src/Menu.cpp.obj.d"
   "CMakeFiles/towerDefense.dir/src/Monster.cpp.obj"
   "CMakeFiles/towerDefense.dir/src/Monster.cpp.obj.d"
   "CMakeFiles/towerDefense.dir/src/Projectile.cpp.obj"

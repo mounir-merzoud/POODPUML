@@ -22,6 +22,7 @@ add_executable(towerDefense
     src/GameData.cpp
     src/Display.cpp
     src/GameManager.cpp
+    src/Menu.cpp
 )
 
 target_include_directories(towerDefense PRIVATE ${SFML_INCLUDE_DIR} src)
