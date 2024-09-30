@@ -124,10 +124,10 @@ void afficherFenetreOptions(bool& musiqueActivee, sf::Music& musique) {
 int ouvrirFenetreJeu() {
     sf::RenderWindow window(sf::VideoMode(775, 775), "SFML window", sf::Style::Fullscreen);
 
-    //towers.push_back(tower);
-    //towers.push_back(tower02);
+    towers.push_back(tower);
+    towers.push_back(tower02);
 
-    //load background image
+    // load background image
     sf::Texture backgroundTexture;
     if (!backgroundTexture.loadFromFile("assets/sprites/bkg.png")) {
         std::cerr << "Failed to load background image" << std::endl;

@@ -649,3 +649,191 @@ events:
       Running the CXX compiler's linker: "C:/MinGW/winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5/mingw64/x86_64-w64-mingw32/bin/ld.exe" "-v"
       GNU ld (Binutils for MinGW-W64 x86_64, built by Brecht Sanders) 2.40
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckTypeSize.cmake:250 (check_include_file)"
+      - "build/_deps/sfml-src/cmake/Config.cmake:10 (check_type_size)"
+      - "build/_deps/sfml-src/CMakeLists.txt:34 (include)"
+    checks:
+      - "Looking for sys/types.h"
+    directories:
+      source: "C:/Users/Jean/POODPUML/build/CMakeFiles/CMakeScratch/TryCompile-juugpb"
+      binary: "C:/Users/Jean/POODPUML/build/CMakeFiles/CMakeScratch/TryCompile-juugpb"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/Jean/POODPUML/build/_deps/sfml-src/cmake/CompilerOptionsOverride.cmake"
+    buildResult:
+      variable: "HAVE_SYS_TYPES_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Jean/POODPUML/build/CMakeFiles/CMakeScratch/TryCompile-juugpb'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/MinGW/winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5/mingw64/bin/mingw32-make.exe -f Makefile cmTC_b7292/fast
+        C:/MinGW/winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_b7292.dir\\build.make CMakeFiles/cmTC_b7292.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/Jean/POODPUML/build/CMakeFiles/CMakeScratch/TryCompile-juugpb'
+        Building C object CMakeFiles/cmTC_b7292.dir/CheckIncludeFile.c.obj
+        C:\\MinGW\\winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5\\mingw64\\bin\\gcc.exe    -o CMakeFiles\\cmTC_b7292.dir\\CheckIncludeFile.c.obj -c C:\\Users\\Jean\\POODPUML\\build\\CMakeFiles\\CMakeScratch\\TryCompile-juugpb\\CheckIncludeFile.c
+        Linking C executable cmTC_b7292.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_b7292.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_b7292.dir/objects.a
+        C:\\MinGW\\winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_b7292.dir/objects.a @CMakeFiles\\cmTC_b7292.dir\\objects1.rsp
+        C:\\MinGW\\winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5\\mingw64\\bin\\gcc.exe -Wl,--whole-archive CMakeFiles\\cmTC_b7292.dir/objects.a -Wl,--no-whole-archive -o cmTC_b7292.exe -Wl,--out-implib,libcmTC_b7292.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_b7292.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/Users/Jean/POODPUML/build/CMakeFiles/CMakeScratch/TryCompile-juugpb'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckTypeSize.cmake:251 (check_include_file)"
+      - "build/_deps/sfml-src/cmake/Config.cmake:10 (check_type_size)"
+      - "build/_deps/sfml-src/CMakeLists.txt:34 (include)"
+    checks:
+      - "Looking for stdint.h"
+    directories:
+      source: "C:/Users/Jean/POODPUML/build/CMakeFiles/CMakeScratch/TryCompile-jsccjx"
+      binary: "C:/Users/Jean/POODPUML/build/CMakeFiles/CMakeScratch/TryCompile-jsccjx"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/Jean/POODPUML/build/_deps/sfml-src/cmake/CompilerOptionsOverride.cmake"
+    buildResult:
+      variable: "HAVE_STDINT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Jean/POODPUML/build/CMakeFiles/CMakeScratch/TryCompile-jsccjx'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/MinGW/winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5/mingw64/bin/mingw32-make.exe -f Makefile cmTC_fb911/fast
+        C:/MinGW/winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_fb911.dir\\build.make CMakeFiles/cmTC_fb911.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/Jean/POODPUML/build/CMakeFiles/CMakeScratch/TryCompile-jsccjx'
+        Building C object CMakeFiles/cmTC_fb911.dir/CheckIncludeFile.c.obj
+        C:\\MinGW\\winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5\\mingw64\\bin\\gcc.exe    -o CMakeFiles\\cmTC_fb911.dir\\CheckIncludeFile.c.obj -c C:\\Users\\Jean\\POODPUML\\build\\CMakeFiles\\CMakeScratch\\TryCompile-jsccjx\\CheckIncludeFile.c
+        Linking C executable cmTC_fb911.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_fb911.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_fb911.dir/objects.a
+        C:\\MinGW\\winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_fb911.dir/objects.a @CMakeFiles\\cmTC_fb911.dir\\objects1.rsp
+        C:\\MinGW\\winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5\\mingw64\\bin\\gcc.exe -Wl,--whole-archive CMakeFiles\\cmTC_fb911.dir/objects.a -Wl,--no-whole-archive -o cmTC_fb911.exe -Wl,--out-implib,libcmTC_fb911.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_fb911.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/Users/Jean/POODPUML/build/CMakeFiles/CMakeScratch/TryCompile-jsccjx'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckTypeSize.cmake:252 (check_include_file)"
+      - "build/_deps/sfml-src/cmake/Config.cmake:10 (check_type_size)"
+      - "build/_deps/sfml-src/CMakeLists.txt:34 (include)"
+    checks:
+      - "Looking for stddef.h"
+    directories:
+      source: "C:/Users/Jean/POODPUML/build/CMakeFiles/CMakeScratch/TryCompile-yuw2hz"
+      binary: "C:/Users/Jean/POODPUML/build/CMakeFiles/CMakeScratch/TryCompile-yuw2hz"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/Jean/POODPUML/build/_deps/sfml-src/cmake/CompilerOptionsOverride.cmake"
+    buildResult:
+      variable: "HAVE_STDDEF_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Jean/POODPUML/build/CMakeFiles/CMakeScratch/TryCompile-yuw2hz'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/MinGW/winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5/mingw64/bin/mingw32-make.exe -f Makefile cmTC_4a935/fast
+        C:/MinGW/winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_4a935.dir\\build.make CMakeFiles/cmTC_4a935.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/Jean/POODPUML/build/CMakeFiles/CMakeScratch/TryCompile-yuw2hz'
+        Building C object CMakeFiles/cmTC_4a935.dir/CheckIncludeFile.c.obj
+        C:\\MinGW\\winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5\\mingw64\\bin\\gcc.exe    -o CMakeFiles\\cmTC_4a935.dir\\CheckIncludeFile.c.obj -c C:\\Users\\Jean\\POODPUML\\build\\CMakeFiles\\CMakeScratch\\TryCompile-yuw2hz\\CheckIncludeFile.c
+        Linking C executable cmTC_4a935.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_4a935.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_4a935.dir/objects.a
+        C:\\MinGW\\winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_4a935.dir/objects.a @CMakeFiles\\cmTC_4a935.dir\\objects1.rsp
+        C:\\MinGW\\winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5\\mingw64\\bin\\gcc.exe -Wl,--whole-archive CMakeFiles\\cmTC_4a935.dir/objects.a -Wl,--no-whole-archive -o cmTC_4a935.exe -Wl,--out-implib,libcmTC_4a935.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_4a935.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/Users/Jean/POODPUML/build/CMakeFiles/CMakeScratch/TryCompile-yuw2hz'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckTypeSize.cmake:146 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckTypeSize.cmake:271 (__check_type_size_impl)"
+      - "build/_deps/sfml-src/cmake/Config.cmake:10 (check_type_size)"
+      - "build/_deps/sfml-src/CMakeLists.txt:34 (include)"
+    checks:
+      - "Check size of void*"
+    directories:
+      source: "C:/Users/Jean/POODPUML/build/CMakeFiles/CMakeScratch/TryCompile-vnb0bv"
+      binary: "C:/Users/Jean/POODPUML/build/CMakeFiles/CMakeScratch/TryCompile-vnb0bv"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/Jean/POODPUML/build/_deps/sfml-src/cmake/CompilerOptionsOverride.cmake"
+    buildResult:
+      variable: "HAVE_SIZEOF_VOID_PTR"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Jean/POODPUML/build/CMakeFiles/CMakeScratch/TryCompile-vnb0bv'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/MinGW/winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5/mingw64/bin/mingw32-make.exe -f Makefile cmTC_8923d/fast
+        C:/MinGW/winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_8923d.dir\\build.make CMakeFiles/cmTC_8923d.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/Jean/POODPUML/build/CMakeFiles/CMakeScratch/TryCompile-vnb0bv'
+        Building C object CMakeFiles/cmTC_8923d.dir/SIZEOF_VOID_PTR.c.obj
+        C:\\MinGW\\winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5\\mingw64\\bin\\gcc.exe    -o CMakeFiles\\cmTC_8923d.dir\\SIZEOF_VOID_PTR.c.obj -c C:\\Users\\Jean\\POODPUML\\build\\CMakeFiles\\CMakeScratch\\TryCompile-vnb0bv\\SIZEOF_VOID_PTR.c
+        Linking C executable cmTC_8923d.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_8923d.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_8923d.dir/objects.a
+        C:\\MinGW\\winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_8923d.dir/objects.a @CMakeFiles\\cmTC_8923d.dir\\objects1.rsp
+        C:\\MinGW\\winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5\\mingw64\\bin\\gcc.exe -Wl,--whole-archive CMakeFiles\\cmTC_8923d.dir/objects.a -Wl,--no-whole-archive -o cmTC_8923d.exe -Wl,--out-implib,libcmTC_8923d.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_8923d.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/Users/Jean/POODPUML/build/CMakeFiles/CMakeScratch/TryCompile-vnb0bv'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFile.cmake:90 (try_compile)"
+      - "build/_deps/sfml-src/src/SFML/Window/CMakeLists.txt:332 (check_include_file)"
+    checks:
+      - "Looking for dinput.h"
+    directories:
+      source: "C:/Users/Jean/POODPUML/build/CMakeFiles/CMakeScratch/TryCompile-rbx3pv"
+      binary: "C:/Users/Jean/POODPUML/build/CMakeFiles/CMakeScratch/TryCompile-rbx3pv"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/Jean/POODPUML/build/_deps/sfml-src/cmake/Modules/"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "13.0"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/Jean/POODPUML/build/_deps/sfml-src/cmake/CompilerOptionsOverride.cmake"
+    buildResult:
+      variable: "DINPUT_H_FOUND"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/Jean/POODPUML/build/CMakeFiles/CMakeScratch/TryCompile-rbx3pv'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/MinGW/winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5/mingw64/bin/mingw32-make.exe -f Makefile cmTC_9acd9/fast
+        C:/MinGW/winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5/mingw64/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_9acd9.dir\\build.make CMakeFiles/cmTC_9acd9.dir/build
+        mingw32-make[1]: Entering directory 'C:/Users/Jean/POODPUML/build/CMakeFiles/CMakeScratch/TryCompile-rbx3pv'
+        Building C object CMakeFiles/cmTC_9acd9.dir/CheckIncludeFile.c.obj
+        C:\\MinGW\\winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5\\mingw64\\bin\\gcc.exe    -o CMakeFiles\\cmTC_9acd9.dir\\CheckIncludeFile.c.obj -c C:\\Users\\Jean\\POODPUML\\build\\CMakeFiles\\CMakeScratch\\TryCompile-rbx3pv\\CheckIncludeFile.c
+        Linking C executable cmTC_9acd9.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_9acd9.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_9acd9.dir/objects.a
+        C:\\MinGW\\winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5\\mingw64\\bin\\ar.exe qc CMakeFiles\\cmTC_9acd9.dir/objects.a @CMakeFiles\\cmTC_9acd9.dir\\objects1.rsp
+        C:\\MinGW\\winlibs-x86_64-posix-seh-gcc-13.1.0-mingw-w64msvcrt-11.0.0-r5\\mingw64\\bin\\gcc.exe -Wl,--whole-archive CMakeFiles\\cmTC_9acd9.dir/objects.a -Wl,--no-whole-archive -o cmTC_9acd9.exe -Wl,--out-implib,libcmTC_9acd9.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_9acd9.dir\\linkLibs.rsp
+        mingw32-make[1]: Leaving directory 'C:/Users/Jean/POODPUML/build/CMakeFiles/CMakeScratch/TryCompile-rbx3pv'
+        
+      exitCode: 0
+...

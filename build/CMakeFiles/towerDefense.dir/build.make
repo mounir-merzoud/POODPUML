@@ -313,10 +313,10 @@ towerDefense.exe: CMakeFiles/towerDefense.dir/src/Display.cpp.obj
 towerDefense.exe: CMakeFiles/towerDefense.dir/src/GameManager.cpp.obj
 towerDefense.exe: CMakeFiles/towerDefense.dir/src/Menu.cpp.obj
 towerDefense.exe: CMakeFiles/towerDefense.dir/build.make
-towerDefense.exe: C:/Users/Jean/SFML/SFML-2.6.1-windows-gcc-13.1.0-mingw-64-bit/SFML-2.6.1/lib/libsfml-graphics-d.a
-towerDefense.exe: C:/Users/Jean/SFML/SFML-2.6.1-windows-gcc-13.1.0-mingw-64-bit/SFML-2.6.1/lib/libsfml-audio-d.a
-towerDefense.exe: C:/Users/Jean/SFML/SFML-2.6.1-windows-gcc-13.1.0-mingw-64-bit/SFML-2.6.1/lib/libsfml-window-d.a
-towerDefense.exe: C:/Users/Jean/SFML/SFML-2.6.1-windows-gcc-13.1.0-mingw-64-bit/SFML-2.6.1/lib/libsfml-system-d.a
+towerDefense.exe: _deps/sfml-build/lib/libsfml-graphics-d.a
+towerDefense.exe: _deps/sfml-build/lib/libsfml-audio-d.a
+towerDefense.exe: _deps/sfml-build/lib/libsfml-window-d.a
+towerDefense.exe: _deps/sfml-build/lib/libsfml-system-d.a
 towerDefense.exe: CMakeFiles/towerDefense.dir/linkLibs.rsp
 towerDefense.exe: CMakeFiles/towerDefense.dir/objects1.rsp
 towerDefense.exe: CMakeFiles/towerDefense.dir/link.txt

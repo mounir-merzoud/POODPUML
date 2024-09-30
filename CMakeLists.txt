@@ -1,12 +1,16 @@
 cmake_minimum_required(VERSION 3.10)
 project(towerDefense VERSION 0.1.0 LANGUAGES C CXX)
 
-set(SFML_DIR "C:/Users/Jean/SFML/SFML-2.6.1-windows-gcc-13.1.0-mingw-64-bit/SFML-2.6.1/lib/cmake/SFML")
-
-
-find_package(SFML 2.6.1 COMPONENTS graphics audio REQUIRED)
-
 include_directories(${SFML_INCLUDE_DIR} src include)
+
+include(FetchContent)
+FetchContent_Declare(SFML
+    GIT_REPOSITORY https://github.com/SFML/SFML.git
+    GIT_TAG 2.6.x
+    GIT_SHALLOW ON
+    EXCLUDE_FROM_ALL
+    SYSTEM)
+FetchContent_MakeAvailable(SFML)
 
 add_executable(towerDefense
     main.cpp

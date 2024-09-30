@@ -14,13 +14,16 @@ std::vector<std::shared_ptr<Tower>>& towers, int money, int& waveNumber, sf::Ren
         for (auto it = monsters.begin(); it != monsters.end();) {
                 auto& monster = *it;
 
-            if (monster->name == "Scorpion") {
-                    monster->sprite.setScale(1.5f, 1.5f);
-                    monster->width = monster->animation.frames[0].width * 1.5f;
-                    monster->height = monster->animation.frames[0].height * 1.5f;
-            };
             window.draw(monster->sprite);
             drawLifeBar(monster, window);
+            // Draw hitbox
+            // sf::RectangleShape hitbox;
+            // hitbox.setSize(sf::Vector2f(monster->width, monster->height));
+            // hitbox.setFillColor(sf::Color::Transparent);
+            // hitbox.setOutlineColor(sf::Color::Red);
+            // hitbox.setOutlineThickness(1.0f);
+            // hitbox.setPosition(monster->positionX, monster->positionY);
+            // window.draw(hitbox);
             ++it;
         }
         for (auto& projectile : projectiles) {
